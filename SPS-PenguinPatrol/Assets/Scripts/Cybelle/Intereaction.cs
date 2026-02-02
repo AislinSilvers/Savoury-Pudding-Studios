@@ -35,8 +35,7 @@ public class Intereaction : MonoBehaviour
     {
        buttonToggle.SetActive(false); 
        objectToToggle.SetActive(false);
-       //Destroy(objectToToggle);
-        press.action.Disable();
+       press.action.Disable();
        
       
     }
