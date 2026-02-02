@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-//this is the move function and it links to the input system which is the context so that is knows what buttons and gamepad can be used
+    //this is the move function and it links to the input system which is the context so that is knows what buttons and gamepad can be used
     public void Move(InputAction.CallbackContext context)
     {
         _input = context.ReadValue<Vector2>();
