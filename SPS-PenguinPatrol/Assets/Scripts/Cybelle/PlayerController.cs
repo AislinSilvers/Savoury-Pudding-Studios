@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     private float _gravity = -9.81f;
     private float _velocity;
 
+    [Header("Jump")]
+    [SerializeField] private float jumpPower;
+
     private void Awake()
     {
         //getting the character controller to be able to move the player
@@ -45,7 +48,7 @@ public class PlayerController : MonoBehaviour
     private void ApplyGravity()
     {
         //so make the fall not be a snap, aka more smooth
-        if (_characterController.isGrounded && _velocity < 0.0f)
+        if (IsGrounded() && _velocity < 0.0f)
         {
             _velocity = -1.0f;
         }
@@ -85,5 +88,17 @@ public class PlayerController : MonoBehaviour
         _input = context.ReadValue<Vector2>();
         _direction = new Vector3(_input.x, 0.0f, _input.y);
     }
+
+    //this is what makes jumping possible, using the input system.
+    public void Jump(InputAction.CallbackContext context)
+    {
+    //this is making sure it is grounded and that the button is pressed, and only whne it is pressed ignoring the rest of the states of the button
+        if (!context.started) return;
+        if (!IsGrounded()) return;
+    //actual jumping code
+        _velocity += jumpPower;
+    }
+    //this is how it will check if it is grounded, just considedered a cleaner way to check and call this
+    private bool IsGrounded() => _characterController.isGrounded;
 
 }
