@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 //used the playlist by chonk on youtube https://www.youtube.com/playlist?list=PLBcfp6HMOJwzDcdCzoAx3jJKm7sIcBXJZ to learn the input system and be able to make the player move
 //this code was writen while watching the video aka its code in the video but i made sure to watch and listen to the exsplantions so that i Understadn what is happening. 
 
+
+//slope code gotten from https://www.youtube.com/watch?v=GI5LAbP5slE, need to make it work properly
+
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
@@ -37,11 +40,17 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //getting the movement and rotations 
+        //getting the movement, rotations and gravity
 
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
+
+
+//        if(OnSteepSlope())
+//        {
+//            SteepSlopeMovement();
+//        }
         
     }
 
@@ -87,6 +96,13 @@ public class PlayerController : MonoBehaviour
     {
         _input = context.ReadValue<Vector2>();
         _direction = new Vector3(_input.x, 0.0f, _input.y);
+
+
+        if(IsGrounded())
+        {
+           _direction.y =-4.5f;  
+        }
+
     }
 
     //this is what makes jumping possible, using the input system.
@@ -100,5 +116,35 @@ public class PlayerController : MonoBehaviour
     }
     //this is how it will check if it is grounded, just considedered a cleaner way to check and call this
     private bool IsGrounded() => _characterController.isGrounded;
+
+//    private bool OnSteepSlope()
+//    {
+//
+//        if (IsGrounded()) return false;
+//
+//        if (Physics.Raycast(transfrom.posistion, Vector3.down, out _slopeHit, (_controller.height / 2) + _groundRayDistance))
+//    {
+//
+//        float _slopeAngle = Vector3.Angle(_slopHit.normal, Vector3.up);
+//        if (_slopeAngle > _controller.slopeLimit) return true;
+//
+//    }
+//
+//    return false;
+//
+//    }
+//
+//    private void SteepSlopeMovement()
+//    {
+//        Vector3 slopeDirection = Vector3.up - _slopeHit.notmal * Vector3.Dot(Vector3.up, _slopeHit.normal);
+//        float slideSpeed = _settings.sped + _settings.slopeSlideSpeed + Time.deltaTime;
+//
+//        
+//        _moveDirection = slopeDirection * -slideSpeed;
+//        _moveDirection.y = _moveDirection.y - _slopeHit.point.y;
+//
+//
+//    }
+    
 
 }

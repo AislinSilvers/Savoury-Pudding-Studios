@@ -20,9 +20,9 @@ public class Intereaction : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
 
-            buttonToggle.SetActive(true);
-            press.action.Enable();
-            press.action.performed += context => objectToToggle.SetActive(!objectToToggle.activeSelf);
+            //buttonToggle.SetActive(true);
+            //press.action.Enable();
+            //press.action.performed += context => objectToToggle.SetActive(!objectToToggle.activeSelf);
         
 
         }
@@ -33,9 +33,9 @@ public class Intereaction : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-       buttonToggle.SetActive(false); 
-       objectToToggle.SetActive(false);
-       press.action.Disable();
+       //buttonToggle.SetActive(false); 
+       //objectToToggle.SetActive(false);
+       //press.action.Disable();
        
       
     }
