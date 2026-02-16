@@ -151,6 +151,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  movement:
+    speed: 10
+    multiplier: 5
+    acceleration: 50
+    isSprinting: 0
+    currentSpeed: 0
   smoothTime: 0.05
   gravityMultiplier: 1
   jumpPower: 4

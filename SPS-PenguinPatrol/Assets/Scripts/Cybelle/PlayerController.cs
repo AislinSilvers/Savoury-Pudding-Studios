@@ -7,8 +7,6 @@ using UnityEngine.InputSystem;
 //this code was writen while watching the video aka its code in the video but i made sure to watch and listen to the exsplantions so that i Understadn what is happening. 
 
 
-//slope code gotten from https://www.youtube.com/watch?v=GI5LAbP5slE, need to make it work properly
-
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float speed;
+    [SerializeField] private Movement movement;
     
     [Header("Rotation")]
     [SerializeField] private float smoothTime = 0.05f;
@@ -47,10 +46,6 @@ public class PlayerController : MonoBehaviour
         ApplyMovement();
 
 
-//        if(OnSteepSlope())
-//        {
-//            SteepSlopeMovement();
-//        }
         
     }
 
@@ -86,8 +81,12 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyMovement()
     {
+
+        //this is the sprinitng code, which i am just going to use as a sliding mechanic
+        var targetSpeed = movement.isSprinting ? movement.speed * movement.multiplier : movement.speed;
+		movement.currentSpeed = Mathf.MoveTowards(movement.currentSpeed, targetSpeed, movement.acceleration * Time.deltaTime);
         //this is the actualy movment code
-         _characterController.Move(_direction * speed * Time.deltaTime);
+         _characterController.Move(_direction * movement.currentSpeed  * Time.deltaTime);
 
     }
 
@@ -114,37 +113,22 @@ public class PlayerController : MonoBehaviour
     //actual jumping code
         _velocity += jumpPower;
     }
+    //this code can be used as a button in input system, although i am going to try and call the sprnting on the area itself we shall see if it work
+   
     //this is how it will check if it is grounded, just considedered a cleaner way to check and call this
     private bool IsGrounded() => _characterController.isGrounded;
 
-//    private bool OnSteepSlope()
-//    {
-//
-//        if (IsGrounded()) return false;
-//
-//        if (Physics.Raycast(transfrom.posistion, Vector3.down, out _slopeHit, (_controller.height / 2) + _groundRayDistance))
-//    {
-//
-//        float _slopeAngle = Vector3.Angle(_slopHit.normal, Vector3.up);
-//        if (_slopeAngle > _controller.slopeLimit) return true;
-//
-//    }
-//
-//    return false;
-//
-//    }
-//
-//    private void SteepSlopeMovement()
-//    {
-//        Vector3 slopeDirection = Vector3.up - _slopeHit.notmal * Vector3.Dot(Vector3.up, _slopeHit.normal);
-//        float slideSpeed = _settings.sped + _settings.slopeSlideSpeed + Time.deltaTime;
-//
-//        
-//        _moveDirection = slopeDirection * -slideSpeed;
-//        _moveDirection.y = _moveDirection.y - _slopeHit.point.y;
-//
-//
-//    }
-    
+[Serializable]
+public struct Movement
+{
+	public float speed;
+	public float multiplier;
+	public float acceleration;
 
+    public bool isSprinting;
+    public float currentSpeed;
+}
+
+
+  
 }
