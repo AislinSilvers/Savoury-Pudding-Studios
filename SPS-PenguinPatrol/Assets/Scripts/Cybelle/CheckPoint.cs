@@ -16,7 +16,7 @@ public class CheckPoint : MonoBehaviour
         //playerRespawn = GameObject.Find("Player").GetComponent<PlayerRespawn>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.name == "Player")
         {
@@ -28,4 +28,4 @@ public class CheckPoint : MonoBehaviour
     }
 }
 
-//got from https://www.youtube.com/watch?v=W7UGintd7ek
+
