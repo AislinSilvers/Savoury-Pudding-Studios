@@ -128,7 +128,29 @@ public struct Movement
     public bool isSprinting;
     public float currentSpeed;
 }
+//coding the slide code which is just the sprint code from the playlist, but instead of using the input system i am using triggers to active the bool 
+public void OnTriggerEnter(Collider other)
+{
+    Debug.Log("hit");
+     if(other.gameObject.tag == "Slide")
+     {
 
+            Debug.Log("slide");
+            movement.isSprinting = true;
 
+    }
+}
+void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Slide")
+        {
+            Debug.Log("stop");
+            //to call the bool, need to name the struct! i think i figuered it out, very simple but got it i think
+            //i figuered it out such a simple thing but it works!!!!!
+            movement.isSprinting = false;
+        }
+    
+        
+    }
   
 }
