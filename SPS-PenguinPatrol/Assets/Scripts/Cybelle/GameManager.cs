@@ -1,16 +1,18 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    //[SerializeField] List<GameObject> puzzleStones = new List<GameObject>();
+  void OnCollisionEnter (Collision Collision)
     {
-        
+        Debug.Log("hit");
+        if (Collision.gameObject.tag == "puzzleStep1")
+        {
+            Debug.Log("correct!");
+            GameObject.Find("Step1").GetComponent<Renderer>().material.color = Color.yellow;
+        }
+
     }
 }
