@@ -65,8 +65,10 @@ public class PlayerController : MonoBehaviour
 
         //Limit force (according to video)
         Vector3.ClampMagnitude(velocityChange, maxForce);
-
+        //this actually moves the player
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+        //the turn code, for turning the player as they move, need to add in space self somehow and get a better grip on how this properlly works
+        //maybe need to freshin up on my maths 
         Quaternion turn = Quaternion.Euler(0f, rotation, 0f);
         rb.MoveRotation(rb.rotation * turn);
 
