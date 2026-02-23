@@ -127,14 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4656202766493211967}
-  speed: 10
-  rotSpeed: 50
-  startPos: {x: 0, y: 0, z: 0}
-  startRot: {x: 0, y: 0, z: 0}
-  GroundLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  groundCollider: {fileID: 0}
+  speed: 4
+  sensitivity: 0.1
+  maxForce: 1
 --- !u!114 &7268296626705713601
 MonoBehaviour:
   m_ObjectHideFlags: 0
