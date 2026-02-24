@@ -15,7 +15,7 @@ using UnityEngine.InputSystem;
 
 
 [RequireComponent (typeof (Rigidbody))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDataPersistence
 {
     [Header("Movement")]
     public Rigidbody rb;
@@ -35,6 +35,18 @@ public class PlayerController : MonoBehaviour
         move = context.ReadValue<Vector2>();
 
     }
+//these two are for saving the players position, for loading and saving the game, so whenever the player comes back they are in the same place.
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
+
+    }
 
     
 //this is the cleaner way to orgnize code, making a seprate method and calling it on fixed update. 
@@ -47,6 +59,7 @@ public class PlayerController : MonoBehaviour
 //this has all the move code in it 
     void Move()
     {
+
         float translation, rotation;
 
         translation = Input.GetAxis("Vertical") * speed * Time.fixedDeltaTime;
@@ -65,8 +78,10 @@ public class PlayerController : MonoBehaviour
 
         //Limit force (according to video)
         Vector3.ClampMagnitude(velocityChange, maxForce);
+
         //this actually moves the player
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+
         //the turn code, for turning the player as they move, need to add in space self somehow and get a better grip on how this properlly works
         //maybe need to freshin up on my maths 
         Quaternion turn = Quaternion.Euler(0f, rotation, 0f);
@@ -76,9 +91,6 @@ public class PlayerController : MonoBehaviour
 
         
     }
-
-    
-
 
 
   
