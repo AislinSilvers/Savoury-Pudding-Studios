@@ -14,84 +14,64 @@ using UnityEngine.InputSystem;
 
 
 
-[RequireComponent (typeof (Rigidbody))]
-public class PlayerController : MonoBehaviour, IDataPersistence
+[RequireComponent(typeof(CharacterController))]
+public class PlayerController : MonoBehaviour
 {
-    [Header("Movement")]
-    public Rigidbody rb;
-    public float speed, sensitivity, maxForce, rotSpeed;
-    private Vector2 move,look;
-    public Vector3 startPos = Vector3.zero;
-    public Vector3 startRot = Vector3.zero;
+   private float playerSpeed = 5.0f;
+    private float jumpHeight = 1.5f;
+    private float gravityValue = -9.81f;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        startPos = transform.position;
-        startRot = transform.localEulerAngles;
-    }
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        move = context.ReadValue<Vector2>();
+    public CharacterController controller;
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
 
-    }
-//these two are for saving the players position, for loading and saving the game, so whenever the player comes back they are in the same place.
-    public void LoadData(GameData data)
-    {
-        this.transform.position = data.playerPosition;
+    [Header("Input Actions")]
+    public InputActionReference moveAction;
+    public InputActionReference jumpAction;
 
+    private void OnEnable()
+    {
+        moveAction.action.Enable();
+        jumpAction.action.Enable();
     }
 
-    public void SaveData(ref GameData data)
+    private void OnDisable()
     {
-        data.playerPosition = this.transform.position;
-
+        moveAction.action.Disable();
+        jumpAction.action.Disable();
     }
 
-    
-//this is the cleaner way to orgnize code, making a seprate method and calling it on fixed update. 
-    private void FixedUpdate()
+    void Update()
     {
-        Move();
+        groundedPlayer = controller.isGrounded;
+
+        if (groundedPlayer)
+        {
+            // Slight downward velocity to keep grounded stable
+            if (playerVelocity.y < -2f)
+                playerVelocity.y = -2f;
+        }
+
+        // Read input
+        Vector2 input = moveAction.action.ReadValue<Vector2>();
+        Vector3 move = new Vector3(input.x, 0, input.y);
+        move = Vector3.ClampMagnitude(move, 1f);
+
+        if (move != Vector3.zero)
+            transform.forward = move;
+
+        // Jump using WasPressedThisFrame()
+        if (groundedPlayer && jumpAction.action.WasPressedThisFrame())
+        {
+            playerVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityValue);
+        }
+
+        // Apply gravity
+        playerVelocity.y += gravityValue * Time.deltaTime;
+
+        // Move
+        Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
+        controller.Move(finalMove * Time.deltaTime);
     }
-
-   
-//this has all the move code in it 
-    void Move()
-    {
-
-        float translation, rotation;
-
-        translation = Input.GetAxis("Vertical") * speed * Time.fixedDeltaTime;
-        rotation = Input.GetAxis("Horizontal") * rotSpeed * Time.fixedDeltaTime;
-
-        //Find target velocity (according to the video)
-        Vector3 currentVelocity = rb.linearVelocity;
-        Vector3 targetVelocity = new Vector3(move.x,0,move.y);
-        targetVelocity *= speed;
-
-        //Allign direction (according to video)
-        targetVelocity = transform.TransformDirection(targetVelocity);
-
-        //Calculate forces (according to video)
-        Vector3 velocityChange = (targetVelocity - currentVelocity);
-
-        //Limit force (according to video)
-        Vector3.ClampMagnitude(velocityChange, maxForce);
-
-        //this actually moves the player
-        rb.AddForce(velocityChange, ForceMode.VelocityChange);
-
-        //the turn code, for turning the player as they move, need to add in space self somehow and get a better grip on how this properlly works
-        //maybe need to freshin up on my maths 
-        Quaternion turn = Quaternion.Euler(0f, rotation, 0f);
-        rb.MoveRotation(rb.rotation * turn);
-
-
-
-        
-    }
-
-
   
 }
