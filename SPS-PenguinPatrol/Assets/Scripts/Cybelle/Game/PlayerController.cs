@@ -12,19 +12,22 @@ using UnityEngine.InputSystem;
 //hoping to use the ray cast from the https://www.youtube.com/watch?v=qdskE8PJy6Q in the updated code (not used as of yet)
 //ended up scraping the old code completly and am using new code with ridgid body and input system.https://www.youtube.com/watch?v=1LtePgzeqjQ
 
-
+//this is code from unity, has basic movemnt and jumping
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-   private float playerSpeed = 5.0f;
+    public float playerSpeed = 5.0f;
     private float jumpHeight = 1.5f;
     private float gravityValue = -9.81f;
+
+    public bool isSprinting;
+   
 
     public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-
+    //this is what makes the imput system work
     [Header("Input Actions")]
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
@@ -73,5 +76,32 @@ public class PlayerController : MonoBehaviour
         Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
         controller.Move(finalMove * Time.deltaTime);
     }
+//sliding 
+ void OnTriggerEnter(Collider other)
+{
+    Debug.Log("hit");
+     if(other.gameObject.tag == "Slide")
+     {
+
+            Debug.Log("slide");
+            playerSpeed = 20f;
+            isSprinting = true;
+
+    }
+}
+void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Slide")
+        {
+            Debug.Log("stop");
+            //to call the bool, need to name the struct! i think i figuered it out, very simple but got it i think
+            //i figuered it out such a simple thing but it works!!!!!
+            playerSpeed = 5.0f;
+            isSprinting = false;
+        }
+    
+        
+    }
+ 
   
 }
