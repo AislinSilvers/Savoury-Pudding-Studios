@@ -12,21 +12,16 @@ public class UI_MainMenu : MonoBehaviour
     [SerializeField] public GameObject settingsPanel;
     [SerializeField] public GameObject aboutPanel;
     [SerializeField] public GameObject quitConfirmationPanel;
-    [SerializeField] public GameObject pausePanel;
     [SerializeField] public GameObject saveLoadsPanel;
-    [SerializeField] public GameObject mapPanel;
-    [SerializeField] public GameObject accessoriesPanel;
+    [SerializeField] public GameObject previousPanel;
     [SerializeField] Button startButton;
     [SerializeField] Button settinsButton;
     [SerializeField] Button aboutButton;
     [SerializeField] Button quitButton;           // Button for quitting the game
     [SerializeField] Button yesQuitButton;
     [SerializeField] Button noQuitButton;
-    [SerializeField] Button pauseButton;
     [SerializeField] Button saveSlotsButton;
-    [SerializeField] Button mapButton;
-    [SerializeField] Button accessoriesButton;
-
+    [SerializeField] Button backButton;
 
     public void Start()
     {
@@ -36,6 +31,7 @@ public class UI_MainMenu : MonoBehaviour
     {
         if (startButton)
         {
+            menuPanel.SetActive(false);
             gamePanel.SetActive(true);
         }
     }
@@ -44,6 +40,7 @@ public class UI_MainMenu : MonoBehaviour
         if (settinsButton)
         {
             settingsPanel.SetActive(true);
+            menuPanel.SetActive(false);
         }
 
 
@@ -53,6 +50,7 @@ public class UI_MainMenu : MonoBehaviour
         if (aboutButton)
         {
             aboutPanel.SetActive(true);
+            previousPanel.SetActive(false);
         }
     }
     public void QuitConfirmation()
@@ -81,32 +79,12 @@ public class UI_MainMenu : MonoBehaviour
         // Close the game application
         Application.Quit();
     }
-    public void Pause()
-    {
-        if (pauseButton)
-        {
-            pausePanel.SetActive(true);
-        }
-    }
     public void SaveSlots()
     {
         if (saveSlotsButton)
         {
             saveLoadsPanel.SetActive(true);
-        }
-    }
-    public void Map()
-    {
-        if (mapButton)
-        {
-            mapPanel.SetActive(true);
-        }   
-    }
-    public void Accessories()
-    {
-        if (accessoriesButton)
-        {
-            accessoriesPanel.SetActive(true);
+            menuPanel.SetActive(false);
         }
     }
 }
