@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class DataPersistenceManager : MonoBehaviour
 {
     //all this code was made form the same video as the GameData script, videos in that scripts notes
+
+    [Header("Debugging")]
+    [SerializeField] private bool initializeDataIfNull = false;
+    
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
 
@@ -27,14 +32,38 @@ public class DataPersistenceManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+        this.dataHandler = new FileDataHandler (Application.persistentDataPath, fileName);
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        this.dataHandler = new FileDataHandler (Application.persistentDataPath, fileName);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded Called");
         this.dataPersistenceObjects =  FindAllDataPersistenceObjects();
         LoadGame();
+
     }
+
+    public void OnSceneUnloaded(Scene scene)
+    {
+        Debug.Log("OnSceneUnloaded Called");
+        SaveGame();
+
+    }
+
 
     public void NewGame()
     {
@@ -46,11 +75,17 @@ public class DataPersistenceManager : MonoBehaviour
         //load any saved data from a file using the data handler
         this.gameData = dataHandler.Load();
 
+        if (this.gameData == null && initializeDataIfNull) 
+        {
+            //will need to toggle the bool on for testing save stuff in scenes if we dont want to go though the whole main menu
+            NewGame();
+        }
+
         //if no data can be loaded, initialize to a new game (according to video), basically load game dosent work unless there is loaded data, make new save if not data
         if(this.gameData == null)
         {
-            Debug.Log("No data was found. Initializing data to defaults.");
-            NewGame();
+            Debug.Log("No data was found. A New Game needs to be started before data can be loaded");
+            return;
         }
 
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
@@ -61,6 +96,12 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void SaveGame()
     {
+        if(this.gameData == null)
+        {
+            Debug.LogWarning("No date was found. A New Game needs to be strted before data can be saved.");
+            return;
+
+        }
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.SaveData( ref gameData);
@@ -83,5 +124,11 @@ public class DataPersistenceManager : MonoBehaviour
 
         return new List<IDataPersistence>(dataPersistenceObjects);
      }
+
+    public bool HasGameData()
+    {
+        return gameData != null;
+
+    }
 
 }
