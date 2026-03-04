@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 //sliding 
  void OnTriggerEnter(Collider other)
 {
-    Debug.Log("hit");
+    //Debug.Log("hit");
      if(other.gameObject.tag == "Slide")
      {
 
