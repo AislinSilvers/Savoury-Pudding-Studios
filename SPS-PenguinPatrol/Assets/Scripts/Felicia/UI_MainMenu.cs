@@ -4,24 +4,25 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class UI_MainMenu : MonoBehaviour
 {
-    [SerializeField] public GameObject gamePanel;
+    //[SerializeField] public GameObject gamePanel;
     [SerializeField] public GameObject menuPanel;
     [SerializeField] public GameObject settingsPanel;
     [SerializeField] public GameObject aboutPanel;
     [SerializeField] public GameObject quitConfirmationPanel;
-    [SerializeField] public GameObject saveLoadsPanel;
     [SerializeField] public GameObject previousPanel;
+
     [SerializeField] Button startButton;
     [SerializeField] Button settinsButton;
     [SerializeField] Button aboutButton;
-    [SerializeField] Button quitButton;           // Button for quitting the game
+    [SerializeField] Button quitButton;           
     [SerializeField] Button yesQuitButton;
     [SerializeField] Button noQuitButton;
-    [SerializeField] Button saveSlotsButton;
-    [SerializeField] Button backButton;
+
+    [SerializeField] Button backButton; //close active panel
 
     public void Start()
     {
@@ -31,8 +32,9 @@ public class UI_MainMenu : MonoBehaviour
     {
         if (startButton)
         {
+            SceneManager.LoadScene(2);
             menuPanel.SetActive(false);
-            gamePanel.SetActive(true);
+            //gamePanel.SetActive(true);
         }
     }
     public void Settings()
@@ -42,8 +44,13 @@ public class UI_MainMenu : MonoBehaviour
             settingsPanel.SetActive(true);
             menuPanel.SetActive(false);
         }
-
-
+        /*  THIS DOESNT WORK!
+        if (backButton)
+        {
+            settingsPanel.SetActive(false);
+            menuPanel.SetActive(true);
+        }
+        */
     }
     public void About()
     {
@@ -52,7 +59,9 @@ public class UI_MainMenu : MonoBehaviour
             aboutPanel.SetActive(true);
             previousPanel.SetActive(false);
         }
+
     }
+    
     public void QuitConfirmation()
     {        
         if (quitButton)
@@ -78,13 +87,5 @@ public class UI_MainMenu : MonoBehaviour
     {
         // Close the game application
         Application.Quit();
-    }
-    public void SaveSlots()
-    {
-        if (saveSlotsButton)
-        {
-            saveLoadsPanel.SetActive(true);
-            menuPanel.SetActive(false);
-        }
     }
 }
