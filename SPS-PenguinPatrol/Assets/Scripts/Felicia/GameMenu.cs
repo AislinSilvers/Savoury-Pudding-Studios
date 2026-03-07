@@ -8,6 +8,7 @@ public class GameMenu : MonoBehaviour
 {
     [SerializeField] public GameObject gameMenu;
     [SerializeField] public GameObject pauseMenu;
+    [SerializeField] public GameObject saveMenu;
     [SerializeField] public GameObject hintMenu;
     [SerializeField] public GameObject mapMenu;
     [SerializeField] public GameObject inventoryMenu;
@@ -17,6 +18,7 @@ public class GameMenu : MonoBehaviour
     [SerializeField] Button resumeButton;
     [SerializeField] Button hintButton;
     [SerializeField] Button closeHintButton;
+    [SerializeField] Button savesButton;
     [SerializeField] Button mapButton;
     [SerializeField] Button inventoryButton;
     [SerializeField] Button settingsButton;
@@ -47,6 +49,13 @@ public class GameMenu : MonoBehaviour
             pauseMenu.SetActive(true);
             gameMenu.SetActive(false);
         } 
+    }
+    public void OpenSaves()
+    {
+        if (savesButton)
+        {
+            saveMenu.SetActive(true);
+        }
     }
     public void OpenMap()
     {

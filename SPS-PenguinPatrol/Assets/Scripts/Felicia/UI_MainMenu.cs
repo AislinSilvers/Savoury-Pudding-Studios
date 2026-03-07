@@ -8,58 +8,55 @@ using UnityEngine.SceneManagement;
 
 public class UI_MainMenu : MonoBehaviour
 {
-    //[SerializeField] public GameObject gamePanel;
+    //panels/canvases on main menu screen (scene 1)
+    [SerializeField] public GameObject savesPanel;
     [SerializeField] public GameObject menuPanel;
     [SerializeField] public GameObject settingsPanel;
     [SerializeField] public GameObject aboutPanel;
     [SerializeField] public GameObject quitConfirmationPanel;
-    [SerializeField] public GameObject previousPanel;
 
+    //buttons on main menu screen (scene 1)
     [SerializeField] Button startButton;
     [SerializeField] Button settinsButton;
     [SerializeField] Button aboutButton;
+    [SerializeField] Button savesButton;
     [SerializeField] Button quitButton;           
     [SerializeField] Button yesQuitButton;
     [SerializeField] Button noQuitButton;
 
-    [SerializeField] Button backButton; //close active panel
 
     public void Start()
     {
-        menuPanel.SetActive(true);
+        menuPanel.SetActive(true);  //auto activate main menu panel
     }
-    public void LoadGame()
+    public void StartGame()
     {
         if (startButton)
         {
-            SceneManager.LoadScene(2);
-            menuPanel.SetActive(false);
-            //gamePanel.SetActive(true);
+            SceneManager.LoadScene(2);  //on start load antarctica
+            //menuPanel.SetActive(false);
+        }
+    }
+    public void LoadSaves()
+    {
+        if (savesButton)
+        {
+            savesPanel.SetActive(true);
         }
     }
     public void Settings()
     {
         if (settinsButton)
         {
-            settingsPanel.SetActive(true);
-            menuPanel.SetActive(false);
+            settingsPanel.SetActive(true);  
         }
-        /*  THIS DOESNT WORK!
-        if (backButton)
-        {
-            settingsPanel.SetActive(false);
-            menuPanel.SetActive(true);
-        }
-        */
     }
     public void About()
     {
         if (aboutButton)
         {
             aboutPanel.SetActive(true);
-            previousPanel.SetActive(false);
         }
-
     }
     
     public void QuitConfirmation()
@@ -73,19 +70,14 @@ public class UI_MainMenu : MonoBehaviour
     {
         if (yesQuitButton)
         {
-            Quit();
+            Application.Quit(); //close application after confirming on conf screen
         }
     }
     public void NoQuit()
     {
-        if(noQuitButton)
+        if (noQuitButton)
         {
             quitConfirmationPanel.SetActive(false);  
         }
-    }
-    public void Quit()
-    {
-        // Close the game application
-        Application.Quit();
     }
 }
