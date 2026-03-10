@@ -3,14 +3,23 @@ using UnityEngine;
 public class inventory : MonoBehaviour
 {
     [SerializeField] GameObject accessory;
-    bool accessoryOn = false;
+    bool accessoryOn;
+
+    // void Start()
+    // {
+    //     if (accessory = null) 
+    //     {
+    //              accessory.SetActive (false);
+    //          }
+    // }
 
     public void toggleAccessory()
     {
         accessoryOn = !accessoryOn;
         Debug.Log(accessoryOn);
 
-        if (accessoryOn == true)
+
+             if (accessoryOn == true)
         {
             accessory.SetActive(true);
         }
@@ -18,5 +27,12 @@ public class inventory : MonoBehaviour
         {
              accessory.SetActive(false);
         }
+
             }
+
+            public void accessoryOff()
+    {
+        accessoryOn = false;
+        accessory.SetActive(false);
+    }
 }
