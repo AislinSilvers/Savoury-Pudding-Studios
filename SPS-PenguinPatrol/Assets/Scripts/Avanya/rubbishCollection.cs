@@ -8,6 +8,8 @@ public class rubbishCollection : MonoBehaviour
 
     private int Currency = 0;
 
+    [SerializeField] int price = 4;
+
     public TextMeshProUGUI currencyText;
 
 
@@ -19,6 +21,11 @@ public class rubbishCollection : MonoBehaviour
             currencyText.text = Currency.ToString();
             Destroy(other.gameObject);
         }
+    }
+
+    public void buyItem()
+    {
+        //nothing for now
     }
     
 }
