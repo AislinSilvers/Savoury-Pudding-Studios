@@ -565,6 +565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364237537081684774}
   - component: {fileID: 33110276856905990}
+  - component: {fileID: 1804418029527868737}
   m_Layer: 0
   m_Name: MenuUI
   m_TagString: Untagged
@@ -614,6 +615,20 @@ MonoBehaviour:
   quitButton: {fileID: 8891306947197247036}
   yesQuitButton: {fileID: 4191549569263981493}
   noQuitButton: {fileID: 5046703844111154853}
+--- !u!114 &1804418029527868737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142400001384017720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9535226dbc5201bb0714171454cffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGameButton: {fileID: 4237661031786991362}
+  contuineGameButton: {fileID: 8403372993837953920}
 --- !u!1 &1473802387372648908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,9 +2759,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 33110276856905990}
-        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
-        m_MethodName: LoadSaves
+      - m_Target: {fileID: 1804418029527868737}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: OnContinueGameClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2877,9 +2892,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 33110276856905990}
-        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 1804418029527868737}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: OnNewGameClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
