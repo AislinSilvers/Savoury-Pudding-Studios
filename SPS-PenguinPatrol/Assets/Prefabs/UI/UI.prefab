@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3277635641389243807}
   - component: {fileID: 8977135999759172521}
+  - component: {fileID: 8283349434169281142}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -51,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMenu: {fileID: 704648134952352216}
   pauseMenu: {fileID: 8855516722921796581}
-  saveMenu: {fileID: 0}
   hintMenu: {fileID: 7300559311330781324}
   mapMenu: {fileID: 8209381157008960752}
   inventoryMenu: {fileID: 1506098615881178156}
@@ -65,6 +65,20 @@ MonoBehaviour:
   inventoryButton: {fileID: 8849240718926316368}
   settingsButton: {fileID: 5045444104158081305}
   backToMainButton: {fileID: 7228161555174794799}
+--- !u!114 &8283349434169281142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855510312196294389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9535226dbc5201bb0714171454cffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGameButton: {fileID: 0}
+  contuineGameButton: {fileID: 991812806615859380}
 --- !u!1001 &3230224836284642073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,7 +90,15 @@ PrefabInstance:
     - target: {fileID: 2384568187277964205, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8977135999759172521}
+      objectReference: {fileID: 8283349434169281142}
+    - target: {fileID: 2384568187277964205, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384568187277964205, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5231923811497530678, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -509,6 +531,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4963166580886499925, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+      propertyPath: locationImage1
+      value: 
+      objectReference: {fileID: 7963137090981620311}
+    - target: {fileID: 4963166580886499925, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+      propertyPath: locationImage2
+      value: 
+      objectReference: {fileID: 6742985505725618781}
+    - target: {fileID: 4963166580886499925, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+      propertyPath: locationImage3
+      value: 
+      objectReference: {fileID: 1462458319660319438}
     - target: {fileID: 5654582831204704938, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
       propertyPath: m_Name
       value: MapCanvas
@@ -522,9 +556,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+--- !u!1 &1462458319660319438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3161311009027411092, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+  m_PrefabInstance: {fileID: 4581437950628679258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1479291786633550698 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3103835014400660784, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+  m_PrefabInstance: {fileID: 4581437950628679258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6742985505725618781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7063733414877549575, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+  m_PrefabInstance: {fileID: 4581437950628679258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7963137090981620311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5842918540096906253, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
   m_PrefabInstance: {fileID: 4581437950628679258}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8209381157008960752 stripped
