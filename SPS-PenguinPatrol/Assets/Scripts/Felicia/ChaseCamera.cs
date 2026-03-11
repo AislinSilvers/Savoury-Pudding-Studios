@@ -9,7 +9,7 @@ using UnityEngine;
 public class ChaseCamera : MonoBehaviour
 {
     //player transform the camera will follow.
-    public static Transform player;
+    public static Transform Player;
 
     [Header("Follow Settings")]
     [SerializeField] private float distance = 1f;       // distance behind the player
@@ -22,10 +22,10 @@ public class ChaseCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player == null) return;
+        if (Player == null) return;
 
         //position to look at
-        Vector3 lookPos = player.position + offset;
+        Vector3 lookPos = Player.position + offset;
 
         //smooth rotation of camera to face player
         Quaternion targetRot = Quaternion.LookRotation(lookPos - transform.position);
@@ -36,9 +36,9 @@ public class ChaseCamera : MonoBehaviour
         );
 
         //calculate follow position
-        Vector3 targetPos = player.position
-                            + player.up * height
-                            - player.forward * distance;
+        Vector3 targetPos = Player.position
+                            + Player.up * height
+                            - Player.forward * distance;
 
         //move camera toward the follow position
         transform.position = Vector3.Lerp(
