@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 //hoping to use the ray cast from the https://www.youtube.com/watch?v=qdskE8PJy6Q in the updated code (not used as of yet)
 //ended up scraping the old code completly and am using new code with ridgid body and input system.https://www.youtube.com/watch?v=1LtePgzeqjQ
 //this is code from unity, has basic movemnt and jumping
+//updated to track last safe position and respawn player instantly when they hit water
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
+
+    // tracks whether player is in water to stop saving unsafe positions
+    private bool isInWater = false;
+    // saves the last position the player was on safe ground
+    private Vector3 lastSafePosition;
 
     //this is what makes the imput system work
     [Header("Input Actions")]
@@ -45,6 +51,12 @@ public class PlayerController : MonoBehaviour
         jumpAction.action.Disable();
     }
 
+    void Start()
+    {
+        // save starting position as first safe position
+        lastSafePosition = transform.position;
+    }
+
     void Update()
     {
         groundedPlayer = controller.isGrounded;
@@ -53,6 +65,12 @@ public class PlayerController : MonoBehaviour
             // Slight downward velocity to keep grounded stable
             if (playerVelocity.y < -2f)
                 playerVelocity.y = -2f;
+        }
+
+        // keep updating last safe position as long as player is on ground and not in water
+        if (!isInWater && groundedPlayer)
+        {
+            lastSafePosition = transform.position;
         }
 
         // Read input
@@ -111,11 +129,18 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isSliding", true);
         }
 
-        // When penguin enters water, trigger swim animation
+        // when penguin enters water, respawn to last safe position instantly
+        // CharacterController must be disabled before moving transform.position
         if (other.gameObject.tag == "Water")
         {
+            isInWater = true;
             animator.SetBool("isSwimming", true);
+            controller.enabled = false;
+            transform.position = lastSafePosition;
+            controller.enabled = true;
+            isInWater = false;
         }
+
         if (other.gameObject.tag == "Mushroom")
         {
             jumpHeight = 5f;
