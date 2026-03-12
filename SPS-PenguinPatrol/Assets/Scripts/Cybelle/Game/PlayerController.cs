@@ -12,7 +12,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float playerSpeed = 5.0f;
-    private float jumpHeight = 1.5f;
+    public float jumpHeight = 1.5f;
     private float gravityValue = -9.81f;
     public bool isSprinting;
 
@@ -116,6 +116,10 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isSwimming", true);
         }
+        if (other.gameObject.tag == "Mushroom")
+        {
+            jumpHeight = 5f;
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -134,6 +138,11 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             animator.SetBool("isSwimming", false);
+        }
+
+        if (other.gameObject.tag == "Mushroom")
+        {
+            jumpHeight = 1.5f;
         }
     }
 }
