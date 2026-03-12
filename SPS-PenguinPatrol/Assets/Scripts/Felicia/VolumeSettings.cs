@@ -12,7 +12,7 @@ public class VolumeSettings : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("musicVolume"))
+        /*if (PlayerPrefs.HasKey("musicVolume"))
         {
             LoadVolume();
         }
@@ -20,7 +20,7 @@ public class VolumeSettings : MonoBehaviour
         {
             SetMusicVolume();
             SetSFXVolume();
-        }
+        }*/
     }
 
     public void SetMusicVolume()
@@ -42,7 +42,7 @@ public class VolumeSettings : MonoBehaviour
         musicSlider.value = PlayerPrefs.GetFloat("Music");
         soundFXSlider.value = PlayerPrefs.GetFloat("SoundFX");
 
-        //SetMusicVolume;
-        //SetSFXVolume;
+        SetMusicVolume();
+        SetSFXVolume();
     }
 }

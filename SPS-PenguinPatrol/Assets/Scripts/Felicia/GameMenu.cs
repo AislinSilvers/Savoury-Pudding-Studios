@@ -8,7 +8,7 @@ public class GameMenu : MonoBehaviour
 {
     [SerializeField] public GameObject gameMenu;
     [SerializeField] public GameObject pauseMenu;
-    [SerializeField] public GameObject saveMenu;
+    //[SerializeField] public GameObject saveMenu;
     [SerializeField] public GameObject hintMenu;
     [SerializeField] public GameObject mapMenu;
     [SerializeField] public GameObject inventoryMenu;
@@ -50,13 +50,13 @@ public class GameMenu : MonoBehaviour
             gameMenu.SetActive(false);
         } 
     }
-    public void OpenSaves()
+    /*public void OpenSaves()
     {
         if (savesButton)
         {
             saveMenu.SetActive(true);
         }
-    }
+    }*/
     public void OpenMap()
     {
         if (mapButton)
