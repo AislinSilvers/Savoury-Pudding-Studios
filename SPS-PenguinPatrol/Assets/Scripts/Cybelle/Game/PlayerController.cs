@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
+
     //this is what makes the imput system work
     [Header("Input Actions")]
     public InputActionReference moveAction;
@@ -28,6 +29,10 @@ public class PlayerController : MonoBehaviour
     // drag your Camera into this slot in the Inspector
     [Header("Camera")]
     public Transform cameraTransform;
+
+    // Drag the penguin mesh child object into this slot in the Inspector
+    [Header("Animation")]
+    public Animator animator;
 
     private void OnEnable()
     {
@@ -39,6 +44,7 @@ public class PlayerController : MonoBehaviour
         moveAction.action.Disable();
         jumpAction.action.Disable();
     }
+
     void Update()
     {
         groundedPlayer = controller.isGrounded;
@@ -48,6 +54,7 @@ public class PlayerController : MonoBehaviour
             if (playerVelocity.y < -2f)
                 playerVelocity.y = -2f;
         }
+
         // Read input
         Vector2 input = moveAction.action.ReadValue<Vector2>();
 
@@ -72,12 +79,18 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityValue);
         }
+
         // Apply gravity
         playerVelocity.y += gravityValue * Time.deltaTime;
+
         // Move
         Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
         controller.Move(finalMove * Time.deltaTime);
+
+        // Drive animations
+        animator.SetBool("isJumping", !groundedPlayer);
     }
+
     //sliding 
     void OnTriggerEnter(Collider other)
     {
@@ -87,8 +100,16 @@ public class PlayerController : MonoBehaviour
             Debug.Log("slide");
             playerSpeed = 20f;
             isSprinting = true;
+            animator.SetBool("isSliding", true);
+        }
+
+        // When penguin enters water, trigger swim animation
+        if (other.gameObject.tag == "Water")
+        {
+            animator.SetBool("isSwimming", true);
         }
     }
+
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Slide")
@@ -98,10 +119,13 @@ public class PlayerController : MonoBehaviour
             //i figuered it out such a simple thing but it works!!!!!
             playerSpeed = 5.0f;
             isSprinting = false;
+            animator.SetBool("isSliding", false);
         }
 
-
+        // When penguin leaves water, stop swim animation
+        if (other.gameObject.tag == "Water")
+        {
+            animator.SetBool("isSwimming", false);
+        }
     }
-
-
 }
