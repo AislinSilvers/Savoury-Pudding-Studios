@@ -72,7 +72,15 @@ public class PlayerController : MonoBehaviour
         move = Vector3.ClampMagnitude(move, 1f);
 
         if (move != Vector3.zero)
-            transform.forward = move;
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 15f * Time.deltaTime);
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
 
         // Jump using WasPressedThisFrame()
         if (groundedPlayer && jumpAction.action.WasPressedThisFrame())
