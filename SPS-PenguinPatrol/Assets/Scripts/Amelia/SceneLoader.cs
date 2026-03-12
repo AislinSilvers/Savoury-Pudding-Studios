@@ -9,7 +9,8 @@ public class SceneLoader : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            PlayerPrefs.SetString("LastScene", "Antarctica");
+            // save which scene we are coming from so load screen knows where to go next
+            PlayerPrefs.SetString("LastScene", "Highlands");
             SceneManager.LoadScene(loadScene);
         }
     }
