@@ -1,45 +1,49 @@
 using UnityEngine;
-
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject chickObject;
     public GameObject playerObject;
-
-    public float speed = 1f;
+    public float speed = 5f;
     public bool follow;
-    
-    
 
+    
+    public Vector3 followOffset = new Vector3(1f, 0f, 0f);
 
-     void Start()
+    void Start()
     {
-        follow = false;   
+        follow = false;
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("follow");
             follow = true;
         }
-
-
     }
 
     void FixedUpdate()
-    { 
+    {
+        if (!follow) return;
+
+       
+        Vector3 targetPosition = playerObject.transform.position +
+                                 playerObject.transform.TransformDirection(followOffset);
+        targetPosition.y = chickObject.transform.position.y; 
+        float dist = Vector3.Distance(chickObject.transform.position, targetPosition);
+
         
-       float dist = Vector3.Distance(chickObject.transform.position, playerObject.transform.position);
-       if(dist > 2 && follow)
+        if (dist > 1f)
         {
-            chickObject.transform.position = Vector3.MoveTowards(chickObject.transform.position, playerObject.transform.position, speed*Time.deltaTime);
+            chickObject.transform.position = Vector3.MoveTowards(
+                chickObject.transform.position,
+                targetPosition,
+                speed * Time.deltaTime
+            );
+
+           
+            chickObject.transform.LookAt(targetPosition);
         }
-
     }
-
-
-
-    
 }

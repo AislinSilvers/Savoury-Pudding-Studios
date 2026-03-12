@@ -779,9 +779,9 @@ Transform:
   m_GameObject: {fileID: 87754609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.8, y: 5.7, z: -2.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 46.5, y: 12.4, z: 31.6}
+  m_LocalScale: {x: 1.78, y: 1.78, z: 1.78}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 801426812}
   - {fileID: 1457860755}
@@ -2933,6 +2933,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 521dd347c53d6d44c95268b4bffd31a5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8a3169c29e0244598c273c16bbe639, type: 2}
     - target: {fileID: 919132149155446097, guid: 521dd347c53d6d44c95268b4bffd31a5, type: 3}
       propertyPath: m_Name
       value: Antarctica_5_Mid (8)
@@ -4633,7 +4637,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 521dd347c53d6d44c95268b4bffd31a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1758361408}
   m_SourcePrefab: {fileID: 100100000, guid: 521dd347c53d6d44c95268b4bffd31a5, type: 3}
 --- !u!1 &1111647504
 GameObject:
@@ -5663,6 +5670,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 04f1de383cfb1274682f4d44be26b59e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8a3169c29e0244598c273c16bbe639, type: 2}
     - target: {fileID: 919132149155446097, guid: 04f1de383cfb1274682f4d44be26b59e, type: 3}
       propertyPath: m_Name
       value: Antarctica_1_Mid
@@ -6222,6 +6233,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85212ccbfb2c0c74fb3cbab11d7817ea, type: 3}
+--- !u!1 &1421064735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
+  m_PrefabInstance: {fileID: 1473240261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1421064738
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421064735}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1811068666325073529, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
 --- !u!1 &1444721859
 GameObject:
   m_ObjectHideFlags: 0
@@ -6413,6 +6451,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e940a21686d22884998b22d189e44879, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8a3169c29e0244598c273c16bbe639, type: 2}
     - target: {fileID: 919132149155446097, guid: e940a21686d22884998b22d189e44879, type: 3}
       propertyPath: m_Name
       value: Antarctica_2_Mid
@@ -6706,6 +6748,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8a3169c29e0244598c273c16bbe639, type: 2}
     - target: {fileID: 919132149155446097, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
       propertyPath: m_Name
       value: Antarctica_3_Mid (1)
@@ -6713,7 +6759,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1421064738}
   m_SourcePrefab: {fileID: 100100000, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
 --- !u!1001 &1478952479
 PrefabInstance:
@@ -6923,6 +6972,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8a3169c29e0244598c273c16bbe639, type: 2}
     - target: {fileID: 919132149155446097, guid: 114347f359ddcbe458b6fd1e866deb6e, type: 3}
       propertyPath: m_Name
       value: Antarctica_3_Mid (2)
@@ -7432,11 +7485,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 943131884}
-  distance: 9
-  height: 2
+  distance: 7
+  height: 1
   mouseSensitivity: 3
   verticalMinAngle: -20
   verticalMaxAngle: 60
+  minDistance: 1
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1645595120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8077,6 +8134,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752729723}
   m_CullTransparentMesh: 1
+--- !u!1 &1758361405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 521dd347c53d6d44c95268b4bffd31a5, type: 3}
+  m_PrefabInstance: {fileID: 1110752730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1758361408
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758361405}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8942196761238935228, guid: 521dd347c53d6d44c95268b4bffd31a5, type: 3}
 --- !u!4 &1758426254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f0519b9f2ee82714595fb74829e19db7, type: 3}
@@ -8882,6 +8966,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1e2ded49a033a484ba05aaba4e24a667, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8a3169c29e0244598c273c16bbe639, type: 2}
     - target: {fileID: 919132149155446097, guid: 1e2ded49a033a484ba05aaba4e24a667, type: 3}
       propertyPath: m_Name
       value: Antarctica_4_Mid
@@ -9570,6 +9658,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4718786195568489340, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: playerSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718786195568489340, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1639175123}
@@ -9677,6 +9769,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 957261624780530444, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983262198944525966, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983262198944525966, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
+      propertyPath: follow
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5983262198944525966, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
