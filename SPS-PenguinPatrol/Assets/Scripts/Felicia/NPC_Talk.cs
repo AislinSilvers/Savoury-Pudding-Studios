@@ -4,6 +4,7 @@ public class NPC_Talk : MonoBehaviour
 {
     private BoxCollider boxCollider;
     public DialogueSO dialogueSO;
+    public bool dialogueActivated;
 
     private void Awake()
     {
@@ -12,7 +13,7 @@ public class NPC_Talk : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Interact"))
+        if(Input.GetButtonDown("Interact") && dialogueActivated == true)
         {
             if (DialogueManager.Instance.isDialogueActive)
                         DialogueManager.Instance.AdvanceDialogue();
@@ -21,8 +22,18 @@ public class NPC_Talk : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            dialogueActivated = true;
+        }
+    }
 
-
+    private void OnTriggerExit(Collider other)
+    {
+        dialogueActivated = false;
+    }
 
 
 
