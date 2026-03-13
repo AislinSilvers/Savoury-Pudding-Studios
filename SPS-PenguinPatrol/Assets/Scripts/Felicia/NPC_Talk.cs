@@ -20,6 +20,7 @@ public class NPC_Talk : MonoBehaviour
             else
                         DialogueManager.Instance.StartDialogue(dialogueSO);
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
