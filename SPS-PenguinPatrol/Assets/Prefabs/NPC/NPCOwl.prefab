@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7073004944054090122}
   - component: {fileID: 1842845227628498753}
   - component: {fileID: 8508620582805045458}
+  - component: {fileID: 2885469836266607017}
   m_Layer: 0
   m_Name: NPCOwl
   m_TagString: Untagged
@@ -67,6 +68,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 24.802656, y: 35.079998, z: 1.1175168}
   m_Center: {x: 0, y: 0, z: 0.03706658}
+--- !u!114 &2885469836266607017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3427477702921612758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88066223cd306d94eb6ce04150d013d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueSO: {fileID: 11400000, guid: e2bd499676a53ab4eb45645fc3cf9ed4, type: 2}
 --- !u!1 &3745420778239797601
 GameObject:
   m_ObjectHideFlags: 0
