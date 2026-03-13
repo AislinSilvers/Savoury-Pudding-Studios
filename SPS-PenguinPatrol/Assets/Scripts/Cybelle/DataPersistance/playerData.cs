@@ -10,13 +10,24 @@ public class playerData : MonoBehaviour, IDataPersistence
     [SerializeField] private bool overrideSpawnPosition = false;
     [SerializeField] private Vector3 spawnOverridePosition = new Vector3(0, 3, 0);
 
+    [Header("Set where the player starts")]
+    public Vector3 startPosition = new Vector3(0, 3, 0);
+
     public void LoadData(GameData data)
     {
+        
         
         if (overrideSpawnPosition)
         {
             this.transform.position = spawnOverridePosition;
             return;
+        }
+
+        else
+        {
+    
+        this.transform.position = startPosition;
+
         }
         this.transform.position = data.playerPosition;
     }
