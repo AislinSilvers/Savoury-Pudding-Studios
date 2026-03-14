@@ -49,6 +49,7 @@ public class rubbishCollection : MonoBehaviour
         {
             Currency -= price;
             hat1Button.SetActive(true);
+            hat1Bought = true;
         }
         else
         {
@@ -69,6 +70,7 @@ public class rubbishCollection : MonoBehaviour
         {
             Currency -= price;
             hat2Button.SetActive(true);
+            hat2Bought = true;
         }
         else
         {
@@ -86,7 +88,9 @@ public class rubbishCollection : MonoBehaviour
 
         if (Currency >= price)
         {
+            Currency -= price;
             hat3Button.SetActive(true);
+            hat3Bought = true;
         }
         else
         {
