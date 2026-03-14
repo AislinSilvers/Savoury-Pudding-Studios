@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private float gravityValue = -9.81f;
     public bool isSprinting;
 
+    public AudioSource audioSource;
+
     public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -100,6 +102,8 @@ public class PlayerController : MonoBehaviour
             playerSpeed = 20f;
             isSprinting = true;
             animator.SetBool("isSliding", true);
+            audioSource.Play();
+            
         }
 
         if (other.gameObject.tag == "Water")
@@ -129,6 +133,7 @@ public class PlayerController : MonoBehaviour
             playerSpeed = 5.0f;
             isSprinting = false;
             animator.SetBool("isSliding", false);
+            audioSource.Stop();
         }
 
         if (other.gameObject.tag == "Water")
