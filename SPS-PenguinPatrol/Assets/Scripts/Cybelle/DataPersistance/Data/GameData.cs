@@ -16,6 +16,9 @@ using UnityEngine.SceneManagement;
 public class GameData 
 {
   public Vector3 playerPosition;
+  public bool hatOne;
+  public bool hatTwo;
+  public bool hatThree;
    
  // the values defined in this constructor will be the default values
  // the game starts with when there's no data to load
@@ -25,5 +28,10 @@ public class GameData
     //changed from Vector3.zero (0,0,0) to Y 3 so the player spawns above ground
     //if player still spawns underground, increase the Y value slightly
     playerPosition = new Vector3(0, 3, 0);
+    
+    //adding hat bools to save? hopefully
+    hatOne = false;
+    hatTwo = false;
+    hatThree = false;
   }
 }
