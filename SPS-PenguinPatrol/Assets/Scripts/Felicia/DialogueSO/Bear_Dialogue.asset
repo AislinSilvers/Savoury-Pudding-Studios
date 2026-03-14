@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417537591e290ed4cbe1c39452e3d179, type: 3}
+  m_Name: Bear_Dialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: cb444df15237804479304c6b93b3c5fd, type: 2}
+    text: Hi, are you okay?
+  - speaker: {fileID: 11400000, guid: bae752d3182d29548bf4816039f958c1, type: 2}
+    text: Hi. Not really. I lost my brother.
+  - speaker: {fileID: 11400000, guid: cb444df15237804479304c6b93b3c5fd, type: 2}
+    text: Oh, sorry, I did not see him anywhere.
+  - speaker: {fileID: 11400000, guid: bae752d3182d29548bf4816039f958c1, type: 2}
+    text: It is okay. Also, can you help me with a puzzle?
+  - speaker: {fileID: 11400000, guid: cb444df15237804479304c6b93b3c5fd, type: 2}
+    text: It is tricky. You need to jump correctly to open the way.
+  - speaker: {fileID: 11400000, guid: bae752d3182d29548bf4816039f958c1, type: 2}
+    text: You mean the tunnel?
+  - speaker: {fileID: 11400000, guid: cb444df15237804479304c6b93b3c5fd, type: 2}
+    text: Yes, you are right. It will open after the puzzle.
+  - speaker: {fileID: 11400000, guid: cb444df15237804479304c6b93b3c5fd, type: 2}
+    text: Also, if you see the rat, do not trust them - they always tell lies.
+  - speaker: {fileID: 11400000, guid: bae752d3182d29548bf4816039f958c1, type: 2}
+    text: Okay, thank you so much.
+  - speaker: {fileID: 11400000, guid: cb444df15237804479304c6b93b3c5fd, type: 2}
+    text: No worries.
+  options: []

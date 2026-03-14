@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6273283125243479301}
+  - component: {fileID: 791729562189422006}
   - component: {fileID: 5745933298698887051}
   - component: {fileID: 8846831071239523468}
+  - component: {fileID: 5985058733978766486}
   m_Layer: 0
   m_Name: NPCBear
   m_TagString: Untagged
@@ -34,6 +36,21 @@ Transform:
   - {fileID: 7734372983472904202}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791729562189422006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316542976997670422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88066223cd306d94eb6ce04150d013d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAnimator: {fileID: 0}
+  dialogueSO: {fileID: 11400000, guid: e79c2765ff980ec4fa8e6cfa641f9f89, type: 2}
+  dialogueActivated: 0
 --- !u!114 &5745933298698887051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +84,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 25.353106, y: 34.39047, z: 1}
   m_Center: {x: 0.17504573, y: 0.11717796, z: 0}
+--- !u!136 &5985058733978766486
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316542976997670422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.885334
+  m_Height: 65.54139
+  m_Direction: 1
+  m_Center: {x: 2.6952171, y: -2.8308058, z: -0.44723797}
 --- !u!1 &4593348692657274743
 GameObject:
   m_ObjectHideFlags: 0

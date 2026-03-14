@@ -97,7 +97,9 @@ GameObject:
   m_Component:
   - component: {fileID: 894447903015833369}
   - component: {fileID: 3492293324855075546}
+  - component: {fileID: 9064879950789682693}
   - component: {fileID: 7377200906010033201}
+  - component: {fileID: 2721737046815953782}
   m_Layer: 0
   m_Name: NPCMushroom
   m_TagString: Untagged
@@ -133,6 +135,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f34a22a9406c34daeb1d23513a8622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9064879950789682693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905112699848302316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88066223cd306d94eb6ce04150d013d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAnimator: {fileID: 0}
+  dialogueSO: {fileID: 11400000, guid: 83b0700deb288014f9398c1bf20af687, type: 2}
+  dialogueActivated: 0
 --- !u!65 &7377200906010033201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154,3 +171,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 25.421888, y: 28.153448, z: 1}
   m_Center: {x: 0.075963736, y: 0.41759014, z: 0}
+--- !u!136 &2721737046815953782
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905112699848302316}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.5347219
+  m_Height: 70.694435
+  m_Direction: 1
+  m_Center: {x: 0.6350231, y: 0.28716564, z: 0}
