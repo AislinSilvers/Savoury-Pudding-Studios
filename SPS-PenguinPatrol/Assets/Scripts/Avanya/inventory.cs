@@ -66,16 +66,16 @@ public class inventory : MonoBehaviour
     }
 
     //toggling inventory panel open and closed
-    public void OpenInventory()
+    public void ToggleInventory()
     {
-        if (inventoryShopPanel) inventoryShopPanel.SetActive(true);
-        if (inventoryButton) inventoryButton.SetActive(false);
-    }
+        if (inventoryShopPanel)
+        {
+            bool isOpen = !inventoryShopPanel.activeSelf;
+            inventoryShopPanel.SetActive(isOpen);
 
-    public void CloseInventory()
-    {
-        if (inventoryShopPanel) inventoryShopPanel.SetActive(false);
-        if (inventoryButton) inventoryButton.SetActive(true);
+            // Keep button always visible
+            if (inventoryButton) inventoryButton.SetActive(true);
+        }
     }
 
     void UpdateShop()

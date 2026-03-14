@@ -4203,6 +4203,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 87754610}
   m_LocalEulerAnglesHint: {x: 0, y: 17.682, z: 0}
+--- !u!1 &270087803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6068687271538720567, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+  m_PrefabInstance: {fileID: 2391586582796656518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &270522278
 GameObject:
   m_ObjectHideFlags: 0
@@ -8528,7 +8533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &584652057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9429,6 +9434,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d1176ca671a718642a47f8db0856d37e, type: 3}
   m_PrefabInstance: {fileID: 683446425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &696255687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1618374606116834342, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+  m_PrefabInstance: {fileID: 2391586582796656518}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &708699242
 PrefabInstance:
@@ -21097,6 +21107,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 480266, guid: c2104b4244726104390b35314ae83e0d, type: 3}
   m_PrefabInstance: {fileID: 1646130682}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1652614211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2455168206141560682, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+  m_PrefabInstance: {fileID: 2391586582796656518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1652924299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 71e3a57b6111541469ffa02563961b2a, type: 3}
@@ -26675,19 +26690,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2107545815}
         m_TargetAssemblyTypeName: inventory, Assembly-CSharp
-        m_MethodName: OpenInventory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2107545815}
-        m_TargetAssemblyTypeName: inventory, Assembly-CSharp
-        m_MethodName: CloseInventory
+        m_MethodName: ToggleInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26747,14 +26750,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9502e54edb25442b7541e760ab26ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryShopPanel: {fileID: 100555689}
+  inventoryShopPanel: {fileID: 584652056}
   inventoryButton: {fileID: 2107545810}
   gogglesOnPenguin: {fileID: 1549968862}
   kiltOnPenguin: {fileID: 265485763}
   hatOnPenguin: {fileID: 1610477565}
-  goggles3DModel: {fileID: 1857402139}
-  kilt3DModel: {fileID: 1617006673}
-  hat3DModel: {fileID: 364832492}
+  goggles3DModel: {fileID: 270087803}
+  kilt3DModel: {fileID: 696255687}
+  hat3DModel: {fileID: 1652614211}
   hat1BuyButton: {fileID: 819698520}
   hat2BuyButton: {fileID: 2100095230}
   hat3BuyButton: {fileID: 1519204677}
@@ -27437,9 +27440,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1618374606116834342, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2455168206141560682, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4718786195568489340, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: audioSource
@@ -27449,6 +27456,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 2391586582796656519}
+    - target: {fileID: 6068687271538720567, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7826945426936834450, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_VolumeTrigger
       value: 
