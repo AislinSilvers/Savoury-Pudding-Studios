@@ -7,16 +7,15 @@ public class inventory : MonoBehaviour
 
         //buying items variables
     public rubbishCollection litterScript;
-    public int money; 
-    int currency;
-
-
-    //GameObject script;
+    // public int money; 
+    // int currency;
 
     void Start()
     {
         litterScript = GameObject.Find("Player").GetComponent<rubbishCollection>();
     }
+
+    //toggling accessories on and off
 
     public void toggleAccessory()
     {
@@ -40,6 +39,9 @@ public class inventory : MonoBehaviour
     }
 
     
+
+    //buying functions 
+
     public void buyItem1()
     {
        litterScript.BuyItem1();
