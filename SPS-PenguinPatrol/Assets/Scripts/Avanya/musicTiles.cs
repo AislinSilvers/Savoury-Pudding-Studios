@@ -3,25 +3,23 @@ using UnityEngine.Events;
 
 public class musicTiles : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] Transform musicParticles;
-
     public int musicNumber = 1;
-
     public UnityEvent tileHit;
+
+    [Header("Sound")]
+    public AudioClip tileSound;
+    public AudioSource audioSource;
 
     private void OnTriggerEnter(Collider other)
     {
-       if(other.transform.tag == "Player")
+        if (other.transform.tag == "Player")
         {
-            tileHit.Invoke();
+            if (audioSource && tileSound)
+                audioSource.PlayOneShot(tileSound);
 
+            tileHit.Invoke();
             Instantiate(musicParticles, transform.position, Quaternion.identity);
         }
-
-
-        
-
-
     }
 }
