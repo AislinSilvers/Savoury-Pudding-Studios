@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private float gravityValue = -9.81f;
     public bool isSprinting;
 
+    public AudioSource audioSource;
+
     public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -50,16 +52,12 @@ public class PlayerController : MonoBehaviour
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer)
         {
-            // Slight downward velocity to keep grounded stable
             if (playerVelocity.y < -2f)
                 playerVelocity.y = -2f;
         }
 
-        // Read input
         Vector2 input = moveAction.action.ReadValue<Vector2>();
 
-        // Get camera forward/right but flatten on Y so moving forward
-        // doesnt send the player up or down based on camera tilt
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
         camForward.y = 0f;
@@ -67,7 +65,6 @@ public class PlayerController : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
-        // Move relative to camera direction instead of world direction
         Vector3 move = camForward * input.y + camRight * input.x;
         move = Vector3.ClampMagnitude(move, 1f);
 
@@ -82,20 +79,16 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
 
-        // Jump using WasPressedThisFrame()
         if (groundedPlayer && jumpAction.action.WasPressedThisFrame())
         {
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityValue);
         }
 
-        // Apply gravity
         playerVelocity.y += gravityValue * Time.deltaTime;
 
-        // Move
         Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
         controller.Move(finalMove * Time.deltaTime);
 
-        // Drive animations
         animator.SetBool("isJumping", !groundedPlayer);
     }
 
@@ -109,9 +102,10 @@ public class PlayerController : MonoBehaviour
             playerSpeed = 20f;
             isSprinting = true;
             animator.SetBool("isSliding", true);
+            audioSource.Play();
+            
         }
 
-        // When penguin enters water, trigger swim animation
         if (other.gameObject.tag == "Water")
         {
             animator.SetBool("isSwimming", true);
@@ -120,6 +114,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Mushroom")
         {
             jumpHeight = 5f;
+        }
+
+        if (other.gameObject.tag == "Tunnel")
+        {
+            ThirdPersonCamera cam = Camera.main.GetComponent<ThirdPersonCamera>();
+            if (cam != null) cam.EnterTunnel();
         }
     }
 
@@ -133,9 +133,9 @@ public class PlayerController : MonoBehaviour
             playerSpeed = 5.0f;
             isSprinting = false;
             animator.SetBool("isSliding", false);
+            audioSource.Stop();
         }
 
-        // When penguin leaves water, stop swim animation
         if (other.gameObject.tag == "Water")
         {
             animator.SetBool("isSwimming", false);
@@ -144,6 +144,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Mushroom")
         {
             jumpHeight = 1.5f;
+        }
+
+        if (other.gameObject.tag == "Tunnel")
+        {
+            ThirdPersonCamera cam = Camera.main.GetComponent<ThirdPersonCamera>();
+            if (cam != null) cam.ExitTunnel();
         }
     }
 }

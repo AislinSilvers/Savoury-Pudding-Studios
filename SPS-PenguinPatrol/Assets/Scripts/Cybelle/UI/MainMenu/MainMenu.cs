@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : Menu
 {
     [Header("Menu Buttons")]
     [SerializeField] private Button newGameButton;
@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
         DisableMenuButtons();
         Debug.Log ("Continue Game Clicked");
         //load next scene, becuase of data persisitance manager simulare to new game
-        SceneManager.LoadSceneAsync("Antarctica");
+        SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SavedScene"));
     }
 
     private void DisableMenuButtons()

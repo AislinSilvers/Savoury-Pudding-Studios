@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 public class DataPersistenceManager : MonoBehaviour
 {
+   
     //all this code was made form the same video as the GameData script, videos in that scripts notes
     [Header("Debugging")]
     [SerializeField] private bool initializeDataIfNull = false;
@@ -102,6 +103,7 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveGame();
+        PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
     }
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {

@@ -66,6 +66,8 @@ MonoBehaviour:
   inventoryButton: {fileID: 8849240718926316368}
   settingsButton: {fileID: 5045444104158081305}
   backToMainButton: {fileID: 7228161555174794799}
+  save: {fileID: 0}
+  pause: {fileID: 5497938433791445068}
 --- !u!114 &8283349434169281142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9535226dbc5201bb0714171454cffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstSelected: {fileID: 0}
   newGameButton: {fileID: 0}
   contuineGameButton: {fileID: 0}
 --- !u!114 &5497938433791445068
@@ -92,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6478d7ccf107d0c6ba421ae9bb99f92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPaused: 0
   pauseMenu: {fileID: 8855516722921796581}
 --- !u!1001 &3230224836284642073
 PrefabInstance:
@@ -113,6 +117,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8977135999759172521}
+    - target: {fileID: 6204484551472148553, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1506098615881178156}
     - target: {fileID: 6210760572739977468, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
       propertyPath: m_Name
       value: PauseCanvas 1
@@ -201,10 +209,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8977135999759172521}
+    - target: {fileID: 7696956265839034880, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7931709321293670905}
     - target: {fileID: 9017877553752754368, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8977135999759172521}
+    - target: {fileID: 9017877553752754368, guid: 58e8a945da3f8511982bf374ecf30079, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 8209381157008960752}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -335,10 +351,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3333183413312407662, guid: a0fedd5a2befddbc09db27e3d5ec6d7a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4231843638806554988, guid: a0fedd5a2befddbc09db27e3d5ec6d7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 8855516722921796581}
     - target: {fileID: 5785596946313704360, guid: a0fedd5a2befddbc09db27e3d5ec6d7a, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
@@ -542,10 +558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5654582831204704938, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 7686417372999039648, guid: 7f85daf67907a7920b9b9f1cce616d99, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 8855516722921796581}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -680,6 +696,22 @@ PrefabInstance:
     - target: {fileID: 6130418078163517966, guid: 48d1a9d800efa1bdb9ea9514e3721c1a, type: 3}
       propertyPath: m_Name
       value: GameCanvas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375147538193211044, guid: 48d1a9d800efa1bdb9ea9514e3721c1a, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375147538193211044, guid: 48d1a9d800efa1bdb9ea9514e3721c1a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375147538193211044, guid: 48d1a9d800efa1bdb9ea9514e3721c1a, type: 3}
+      propertyPath: m_Color.a
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375147538193211044, guid: 48d1a9d800efa1bdb9ea9514e3721c1a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8960499529555662209, guid: 48d1a9d800efa1bdb9ea9514e3721c1a, type: 3}
       propertyPath: m_Sprite
@@ -830,6 +862,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3757673129886953608, guid: db7c8c01540c6a693a70f0d72c6f4f8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 8855516722921796581}
     - target: {fileID: 8357104958219521922, guid: db7c8c01540c6a693a70f0d72c6f4f8d, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas

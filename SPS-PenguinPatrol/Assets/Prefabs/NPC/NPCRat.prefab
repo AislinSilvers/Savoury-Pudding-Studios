@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8519289258717576536}
   - component: {fileID: 8834907343562841072}
+  - component: {fileID: 5038004788708804016}
   - component: {fileID: 5680867618241288255}
+  - component: {fileID: 6461884626945001920}
   m_Layer: 0
   m_Name: NPCRat
   m_TagString: Untagged
@@ -46,6 +48,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f34a22a9406c34daeb1d23513a8622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5038004788708804016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3489118664686156217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88066223cd306d94eb6ce04150d013d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAnimator: {fileID: 0}
+  dialogueSO: {fileID: 11400000, guid: 9dd7389b8ee84d045b0b5a0bd856b2e1, type: 2}
+  dialogueActivated: 0
 --- !u!65 &5680867618241288255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67,6 +84,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 36.369404, y: 27.14598, z: 1}
   m_Center: {x: -0.25170276, y: -0.037385736, z: 0}
+--- !u!136 &6461884626945001920
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3489118664686156217}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.1088862
+  m_Height: 60.25389
+  m_Direction: 1
+  m_Center: {x: -0.71804184, y: 3.181999, z: 0}
 --- !u!1 &3773901866670082208
 GameObject:
   m_ObjectHideFlags: 0

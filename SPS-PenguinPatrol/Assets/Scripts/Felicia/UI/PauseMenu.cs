@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private bool isPaused;
+    public bool isPaused;
     [SerializeField] GameObject pauseMenu;
-
+    //cybelle added studd to mace sure game loads in not pause state
+     void Awake()
+    {
+        isPaused = false; 
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+    }
     void Update()
     {
         if(Input.GetButtonDown("Pause"))

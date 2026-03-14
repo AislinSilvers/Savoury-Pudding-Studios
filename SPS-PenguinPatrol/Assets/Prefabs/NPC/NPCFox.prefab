@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1149145825060493553}
-  - component: {fileID: 8765184191112684136}
   - component: {fileID: 7889664845227599918}
+  - component: {fileID: 8171601283662070270}
+  - component: {fileID: 8765184191112684136}
+  - component: {fileID: 1045618848907231185}
   m_Layer: 0
   m_Name: NPCFox
   m_TagString: Untagged
@@ -34,6 +36,33 @@ Transform:
   - {fileID: 3389896677684569094}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7889664845227599918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5473401232244462154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f34a22a9406c34daeb1d23513a8622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8171601283662070270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5473401232244462154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88066223cd306d94eb6ce04150d013d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAnimator: {fileID: 0}
+  dialogueSO: {fileID: 11400000, guid: 6726636ab3546784a8723f3dc6b5306b, type: 2}
+  dialogueActivated: 0
 --- !u!65 &8765184191112684136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55,18 +84,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 24.625645, y: 29.344597, z: 1}
   m_Center: {x: 0.17430305, y: 0.026950836, z: 0}
---- !u!114 &7889664845227599918
-MonoBehaviour:
+--- !u!136 &1045618848907231185
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5473401232244462154}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f34a22a9406c34daeb1d23513a8622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Radius: 3.1113806
+  m_Height: 53.86795
+  m_Direction: 1
+  m_Center: {x: 2.80625, y: -2.733027, z: 0}
 --- !u!1 &8670867715280688703
 GameObject:
   m_ObjectHideFlags: 0
