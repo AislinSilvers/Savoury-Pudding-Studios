@@ -96,8 +96,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2908114427321869263}
-  - component: {fileID: 8037430522582765997}
   - component: {fileID: 1213360919333575581}
+  - component: {fileID: 2902885491764275024}
+  - component: {fileID: 8037430522582765997}
+  - component: {fileID: 1684167865849997034}
   m_Layer: 0
   m_Name: NPCUnicorn
   m_TagString: Untagged
@@ -121,6 +123,33 @@ Transform:
   - {fileID: 4853549097336592949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213360919333575581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520511499652194660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f34a22a9406c34daeb1d23513a8622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2902885491764275024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520511499652194660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88066223cd306d94eb6ce04150d013d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAnimator: {fileID: 0}
+  dialogueSO: {fileID: 11400000, guid: b4bb8f23ff725c449b0a51cb95e0c158, type: 2}
+  dialogueActivated: 0
 --- !u!65 &8037430522582765997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142,15 +171,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 24.004576, y: 36.630642, z: 1}
   m_Center: {x: 0.53414184, y: -0.20643234, z: 0}
---- !u!114 &1213360919333575581
-MonoBehaviour:
+--- !u!136 &1684167865849997034
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8520511499652194660}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f34a22a9406c34daeb1d23513a8622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Radius: 5.916987
+  m_Height: 54.633812
+  m_Direction: 1
+  m_Center: {x: -1.203386, y: 2.4150593, z: 0}

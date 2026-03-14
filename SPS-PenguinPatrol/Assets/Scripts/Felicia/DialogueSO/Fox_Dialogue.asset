@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417537591e290ed4cbe1c39452e3d179, type: 3}
+  m_Name: Fox_Dialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 7927d5781e7343143aabd93cfbf1580c, type: 2}
+    text: Hello, little one. Are you lost?
+  - speaker: {fileID: 11400000, guid: bae752d3182d29548bf4816039f958c1, type: 2}
+    text: Um, no. I look for my brother. Did you see him?
+  - speaker: {fileID: 11400000, guid: 7927d5781e7343143aabd93cfbf1580c, type: 2}
+    text: No, but I did hear strange noise from the castle. You can go check.
+  - speaker: {fileID: 11400000, guid: bae752d3182d29548bf4816039f958c1, type: 2}
+    text: But how do I get inside? The door is closed.
+  - speaker: {fileID: 11400000, guid: 7927d5781e7343143aabd93cfbf1580c, type: 2}
+    text: Oh, do not worry. There may be a hole, go look around the castle.
+  - speaker: {fileID: 11400000, guid: bae752d3182d29548bf4816039f958c1, type: 2}
+    text: Okay, thank you!
+  - speaker: {fileID: 11400000, guid: 7927d5781e7343143aabd93cfbf1580c, type: 2}
+    text: You are welcome!
+  options: []
