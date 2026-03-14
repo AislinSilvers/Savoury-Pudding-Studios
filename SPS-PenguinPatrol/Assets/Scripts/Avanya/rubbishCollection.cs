@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 
-public class rubbishCollection : MonoBehaviour, IDataPersistence
+public class rubbishCollection : MonoBehaviour
 {
     //https://www.youtube.com/watch?v=6iSJ_jh6Rdo
     [SerializeField] public int Currency = 0;
@@ -35,58 +35,21 @@ public class rubbishCollection : MonoBehaviour, IDataPersistence
 
     public void BuyItem1()
     {
-        Debug.Log("hat1");
-        if (Currency >= price && !hat1Bought)
-        {
-            Currency -= price;
-            hat1Bought = true;
-            if (hat1Button) hat1Button.SetActive(true);
-        }
+        hat1Bought = true;
         currencyText.text = Currency.ToString();
-        Debug.Log(Currency);
     }
 
     public void BuyItem2()
     {
-        Debug.Log("hat2");
-        if (Currency >= price && !hat2Bought)
-        {
-            Currency -= price;
-            hat2Bought = true;
-            if (hat2Button) hat2Button.SetActive(true);
-        }
+        hat2Bought = true;
         currencyText.text = Currency.ToString();
-        Debug.Log(Currency);
     }
 
     public void BuyItem3()
     {
-        Debug.Log("hat3");
-        if (Currency >= price && !hat3Bought)
-        {
-            Currency -= price;
-            hat3Bought = true;
-            if (hat3Button) hat3Button.SetActive(true);
-        }
+        hat3Bought = true;
         currencyText.text = Currency.ToString();
-        Debug.Log(Currency);
     }
 
     //buy item - this much currency
-
-
-    //cybelle added save stuff
-      public void LoadData(GameData data)
-    {
-    
-        hat1Bought = data.hatOne;
-        hat2Bought = data.hatTwo;
-        hat3Bought = data.hatThree;
-    }
-    public void SaveData(ref GameData data)
-    {
-        data.hatOne = hat1Bought;
-        data.hatTwo = hat2Bought;
-        data.hatThree = hat3Bought;
-    }
 }

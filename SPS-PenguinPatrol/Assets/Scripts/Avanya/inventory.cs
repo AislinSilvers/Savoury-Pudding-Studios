@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class inventory : MonoBehaviour
 {
@@ -22,18 +23,17 @@ public class inventory : MonoBehaviour
     public GameObject hat3BuyButton;
 
     [Header("Item Sprites - always visible but greyed until affordable")]
-    public UnityEngine.UI.Image hat1Image;
-    public UnityEngine.UI.Image hat2Image;
-    public UnityEngine.UI.Image hat3Image;
+    public Image hat1Image;
+    public Image hat2Image;
+    public Image hat3Image;
 
     [Header("Costs")]
     public int hat1Cost = 25;
     public int hat2Cost = 30;
     public int hat3Cost = 35;
 
-    private bool gogglesOn;
-    private bool kiltOn;
-    private bool hatOn;
+    // 0 = none, 1 = goggles, 2 = kilt, 3 = hat
+    private int equippedItem = 0;
 
     //buying items variables
     public rubbishCollection litterScript;
@@ -45,13 +45,7 @@ public class inventory : MonoBehaviour
         if (inventoryShopPanel) inventoryShopPanel.SetActive(false);
         if (inventoryButton) inventoryButton.SetActive(true);
 
-        if (gogglesOnPenguin) gogglesOnPenguin.SetActive(false);
-        if (kiltOnPenguin) kiltOnPenguin.SetActive(false);
-        if (hatOnPenguin) hatOnPenguin.SetActive(false);
-
-        if (goggles3DModel) goggles3DModel.SetActive(false);
-        if (kilt3DModel) kilt3DModel.SetActive(false);
-        if (hat3DModel) hat3DModel.SetActive(false);
+        EquipItem(0);
 
         if (hat1BuyButton) hat1BuyButton.SetActive(false);
         if (hat2BuyButton) hat2BuyButton.SetActive(false);
@@ -63,6 +57,36 @@ public class inventory : MonoBehaviour
     void Update()
     {
         UpdateShop();
+    }
+
+    void EquipItem(int item)
+    {
+        // turn everything off first
+        if (gogglesOnPenguin) gogglesOnPenguin.SetActive(false);
+        if (kiltOnPenguin) kiltOnPenguin.SetActive(false);
+        if (hatOnPenguin) hatOnPenguin.SetActive(false);
+        if (goggles3DModel) goggles3DModel.SetActive(false);
+        if (kilt3DModel) kilt3DModel.SetActive(false);
+        if (hat3DModel) hat3DModel.SetActive(false);
+
+        equippedItem = item;
+
+        // turn on the selected one
+        if (item == 1)
+        {
+            if (gogglesOnPenguin) gogglesOnPenguin.SetActive(true);
+            if (goggles3DModel) goggles3DModel.SetActive(true);
+        }
+        else if (item == 2)
+        {
+            if (kiltOnPenguin) kiltOnPenguin.SetActive(true);
+            if (kilt3DModel) kilt3DModel.SetActive(true);
+        }
+        else if (item == 3)
+        {
+            if (hatOnPenguin) hatOnPenguin.SetActive(true);
+            if (hat3DModel) hat3DModel.SetActive(true);
+        }
     }
 
     //toggling inventory panel open and closed
@@ -86,36 +110,75 @@ public class inventory : MonoBehaviour
         {
             bool canAfford1 = litterScript.Currency >= hat1Cost;
             if (hat1BuyButton) hat1BuyButton.SetActive(canAfford1);
-            if (hat1Image) hat1Image.color = canAfford1 ? Color.white : new Color(0.4f, 0.4f, 0.4f, 1f);
+            if (hat1Image)
+            {
+                hat1Image.color = canAfford1 ? Color.white : new Color(0.4f, 0.4f, 0.4f, 1f);
+                hat1Image.GetComponent<Button>()?.onClick.RemoveAllListeners();
+            }
         }
         else
         {
             if (hat1BuyButton) hat1BuyButton.SetActive(false);
-            if (hat1Image) hat1Image.color = Color.white;
+            if (hat1Image)
+            {
+                hat1Image.color = Color.white;
+                Button btn = hat1Image.GetComponent<Button>();
+                if (btn != null)
+                {
+                    btn.onClick.RemoveAllListeners();
+                    btn.onClick.AddListener(toggleGoggles);
+                }
+            }
         }
 
         if (!litterScript.hat2Bought)
         {
             bool canAfford2 = litterScript.Currency >= hat2Cost;
             if (hat2BuyButton) hat2BuyButton.SetActive(canAfford2);
-            if (hat2Image) hat2Image.color = canAfford2 ? Color.white : new Color(0.4f, 0.4f, 0.4f, 1f);
+            if (hat2Image)
+            {
+                hat2Image.color = canAfford2 ? Color.white : new Color(0.4f, 0.4f, 0.4f, 1f);
+                hat2Image.GetComponent<Button>()?.onClick.RemoveAllListeners();
+            }
         }
         else
         {
             if (hat2BuyButton) hat2BuyButton.SetActive(false);
-            if (hat2Image) hat2Image.color = Color.white;
+            if (hat2Image)
+            {
+                hat2Image.color = Color.white;
+                Button btn = hat2Image.GetComponent<Button>();
+                if (btn != null)
+                {
+                    btn.onClick.RemoveAllListeners();
+                    btn.onClick.AddListener(toggleKit);
+                }
+            }
         }
 
         if (!litterScript.hat3Bought)
         {
             bool canAfford3 = litterScript.Currency >= hat3Cost;
             if (hat3BuyButton) hat3BuyButton.SetActive(canAfford3);
-            if (hat3Image) hat3Image.color = canAfford3 ? Color.white : new Color(0.4f, 0.4f, 0.4f, 1f);
+            if (hat3Image)
+            {
+                hat3Image.color = canAfford3 ? Color.white : new Color(0.4f, 0.4f, 0.4f, 1f);
+                hat3Image.GetComponent<Button>()?.onClick.RemoveAllListeners();
+            }
         }
         else
         {
             if (hat3BuyButton) hat3BuyButton.SetActive(false);
-            if (hat3Image) hat3Image.color = Color.white;
+            if (hat3Image)
+            {
+                hat3Image.color = Color.white;
+                Button btn = hat3Image.GetComponent<Button>();
+                if (btn != null)
+                {
+                    btn.onClick.RemoveAllListeners();
+                    btn.onClick.AddListener(toggleHat);
+                }
+            }
         }
     }
 
@@ -127,7 +190,7 @@ public class inventory : MonoBehaviour
             litterScript.Currency -= hat1Cost;
             litterScript.currencyText.text = litterScript.Currency.ToString();
             litterScript.hat1Bought = true;
-            if (goggles3DModel) goggles3DModel.SetActive(true);
+            EquipItem(1);
         }
         UpdateShop();
     }
@@ -139,7 +202,7 @@ public class inventory : MonoBehaviour
             litterScript.Currency -= hat2Cost;
             litterScript.currencyText.text = litterScript.Currency.ToString();
             litterScript.hat2Bought = true;
-            if (kilt3DModel) kilt3DModel.SetActive(true);
+            EquipItem(2);
         }
         UpdateShop();
     }
@@ -151,7 +214,7 @@ public class inventory : MonoBehaviour
             litterScript.Currency -= hat3Cost;
             litterScript.currencyText.text = litterScript.Currency.ToString();
             litterScript.hat3Bought = true;
-            if (hat3DModel) hat3DModel.SetActive(true);
+            EquipItem(3);
         }
         UpdateShop();
     }
@@ -160,37 +223,27 @@ public class inventory : MonoBehaviour
     public void toggleGoggles()
     {
         if (!litterScript.hat1Bought) return;
-        gogglesOn = !gogglesOn;
-        if (gogglesOnPenguin) gogglesOnPenguin.SetActive(gogglesOn);
-        if (goggles3DModel) goggles3DModel.SetActive(gogglesOn);
+        // if already equipped toggle off, otherwise equip
+        if (equippedItem == 1) EquipItem(0);
+        else EquipItem(1);
     }
 
     public void toggleKit()
     {
         if (!litterScript.hat2Bought) return;
-        kiltOn = !kiltOn;
-        if (kiltOnPenguin) kiltOnPenguin.SetActive(kiltOn);
-        if (kilt3DModel) kilt3DModel.SetActive(kiltOn);
+        if (equippedItem == 2) EquipItem(0);
+        else EquipItem(2);
     }
 
     public void toggleHat()
     {
         if (!litterScript.hat3Bought) return;
-        hatOn = !hatOn;
-        if (hatOnPenguin) hatOnPenguin.SetActive(hatOn);
-        if (hat3DModel) hat3DModel.SetActive(hatOn);
+        if (equippedItem == 3) EquipItem(0);
+        else EquipItem(3);
     }
 
     public void accessoryOff()
     {
-        gogglesOn = false;
-        kiltOn = false;
-        hatOn = false;
-        if (gogglesOnPenguin) gogglesOnPenguin.SetActive(false);
-        if (kiltOnPenguin) kiltOnPenguin.SetActive(false);
-        if (hatOnPenguin) hatOnPenguin.SetActive(false);
-        if (goggles3DModel) goggles3DModel.SetActive(false);
-        if (kilt3DModel) kilt3DModel.SetActive(false);
-        if (hat3DModel) hat3DModel.SetActive(false);
+        EquipItem(0);
     }
 }
