@@ -42,7 +42,7 @@ public class MainMenu : Menu
         DisableMenuButtons();
         Debug.Log ("Continue Game Clicked");
         //load next scene, becuase of data persisitance manager simulare to new game
-        SceneManager.LoadSceneAsync("Antarctica");
+        SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SavedScene"));
     }
 
     private void DisableMenuButtons()

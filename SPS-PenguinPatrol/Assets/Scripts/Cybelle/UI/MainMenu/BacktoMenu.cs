@@ -6,9 +6,20 @@ using UnityEngine.UI;
 
 public class BacktoMenu : MonoBehaviour
 {
+    
+    public DataPersistenceManager save;
+
+    public void Start()
+    {
+        
+        save = GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>();
+    }
+
     public void BackButton()
     {
-       
+        save.SaveGame();
+        PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadSceneAsync("Menu");
+        
     }
 }

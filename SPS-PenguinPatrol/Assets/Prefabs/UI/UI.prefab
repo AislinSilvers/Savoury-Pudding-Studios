@@ -66,6 +66,8 @@ MonoBehaviour:
   inventoryButton: {fileID: 8849240718926316368}
   settingsButton: {fileID: 5045444104158081305}
   backToMainButton: {fileID: 7228161555174794799}
+  save: {fileID: 0}
+  pause: {fileID: 5497938433791445068}
 --- !u!114 &8283349434169281142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6478d7ccf107d0c6ba421ae9bb99f92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPaused: 0
   pauseMenu: {fileID: 8855516722921796581}
 --- !u!1001 &3230224836284642073
 PrefabInstance:

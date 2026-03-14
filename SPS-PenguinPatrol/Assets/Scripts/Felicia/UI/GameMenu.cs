@@ -24,9 +24,16 @@ public class GameMenu : MonoBehaviour
     [SerializeField] Button settingsButton;
     [SerializeField] Button backToMainButton;
 
+    //cybelle added some data stuff to make sure it saves game on back to menu
+   
+    public DataPersistenceManager save;
+    public PauseMenu pause;
+
     public void Start()
     {
         gameMenu.SetActive(true);
+        save = GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>();
+        pause = GetComponent<PauseMenu>();
     }
     public void Hint()
     {
@@ -82,7 +89,10 @@ public class GameMenu : MonoBehaviour
     {
         if (backToMainButton)
         {
+            save.SaveGame();
+            PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(1);
+            
         }
     }
     public void Resume()
@@ -90,6 +100,9 @@ public class GameMenu : MonoBehaviour
         if (resumeButton)
         {
             pauseMenu.SetActive(false);
+            pause.isPaused = false; 
+            Time.timeScale = 1;
+            AudioListener.pause = false;
             gameMenu.SetActive(true);
         }
     }
