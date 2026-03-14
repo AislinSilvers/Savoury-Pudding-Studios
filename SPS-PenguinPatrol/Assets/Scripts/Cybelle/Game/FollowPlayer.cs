@@ -1,13 +1,12 @@
 using UnityEngine;
+
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject chickObject;
     public GameObject playerObject;
-    public float speed = 5f;
-    public bool follow;
-
-    
-    public Vector3 followOffset = new Vector3(1f, 0f, 0f);
+    public float smoothSpeed = 8f;
+    public float rotationSpeed = 5f;
+    public bool follow = false;
+    public Vector3 followOffset = new Vector3(1.5f, 0f, -1f);
 
     void Start()
     {
@@ -18,32 +17,34 @@ public class FollowPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("follow");
             follow = true;
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (!follow) return;
 
-       
         Vector3 targetPosition = playerObject.transform.position +
                                  playerObject.transform.TransformDirection(followOffset);
-        targetPosition.y = chickObject.transform.position.y; 
-        float dist = Vector3.Distance(chickObject.transform.position, targetPosition);
+        targetPosition.y = transform.position.y;
 
-        
-        if (dist > 1f)
-        {
-            chickObject.transform.position = Vector3.MoveTowards(
-                chickObject.transform.position,
-                targetPosition,
-                speed * Time.deltaTime
-            );
+        transform.position = Vector3.Lerp(
+            transform.position,
+            targetPosition,
+            smoothSpeed * Time.deltaTime
+        );
 
-           
-            chickObject.transform.LookAt(targetPosition);
-        }
+        Quaternion targetRotation = Quaternion.Euler(
+            0,
+            playerObject.transform.eulerAngles.y + 180f,
+            0
+        );
+
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRotation,
+            rotationSpeed * Time.deltaTime
+        );
     }
 }
