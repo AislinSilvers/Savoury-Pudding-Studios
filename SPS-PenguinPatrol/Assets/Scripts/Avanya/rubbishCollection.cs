@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 
-public class rubbishCollection : MonoBehaviour
+public class rubbishCollection : MonoBehaviour, IDataPersistence
 {
     //https://www.youtube.com/watch?v=6iSJ_jh6Rdo
     [SerializeField] public int Currency = 0;
@@ -73,4 +73,20 @@ public class rubbishCollection : MonoBehaviour
     }
 
     //buy item - this much currency
+
+
+    //cybelle added save stuff
+      public void LoadData(GameData data)
+    {
+    
+        hat1Bought = data.hatOne;
+        hat2Bought = data.hatTwo;
+        hat3Bought = data.hatThree;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.hatOne = hat1Bought;
+        data.hatTwo = hat2Bought;
+        data.hatThree = hat3Bought;
+    }
 }
