@@ -727,6 +727,8 @@ MonoBehaviour:
           m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
+  tileSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!65 &79663916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2188,6 +2190,8 @@ MonoBehaviour:
           m_StringArgument: 2
           m_BoolArgument: 0
         m_CallState: 2
+  tileSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!65 &192514811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6076,8 +6080,9 @@ GameObject:
   m_Component:
   - component: {fileID: 609503801}
   - component: {fileID: 609503800}
+  - component: {fileID: 609503802}
   m_Layer: 0
-  m_Name: puzzle
+  m_Name: MusicPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6096,9 +6101,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pattern: 1234
-  puzzleLength: 0
-  celebration: {fileID: 5086472330739652319, guid: 8c0e85acd4a881448b79fd2658b2261e, type: 3}
-  losing: {fileID: 6541853764826139572, guid: 0d2ae06303896e840933c6c88e29a8f0, type: 3}
+  puzzleLength: 4
+  audioSource: {fileID: 0}
+  correctSound: {fileID: 0}
+  incorrectSound: {fileID: 0}
+  onPuzzleSolved:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 609503802}
+        m_TargetAssemblyTypeName: CavePuzzleSolve, Assembly-CSharp
+        m_MethodName: RaiseCrystals
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPuzzleFailed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &609503801
 Transform:
   m_ObjectHideFlags: 0
@@ -6114,6 +6138,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 150.019, z: 0}
+--- !u!114 &609503802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609503799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ac282eb96942040aa78ea3d574c2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystals: {fileID: 1494412631}
+  startPosition: {x: 37.88545, y: 30.65794, z: -247.5211}
+  endPosition: {x: 37.88545, y: 46.04, z: -247.5211}
+  animSpeed: 2
 --- !u!1001 &639722655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12818,7 +12858,7 @@ Transform:
   m_GameObject: {fileID: 1494412630}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000018626451, y: -0.86456436, z: 0.000000011175871, w: 0.5025223}
-  m_LocalPosition: {x: 37.88545, y: 30.65794, z: -247.52115}
+  m_LocalPosition: {x: 37.88545, y: 46.04, z: -247.52115}
   m_LocalScale: {x: 4.1150765, y: 4.0901756, z: 4.065279}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14160,6 +14200,8 @@ MonoBehaviour:
           m_StringArgument: 3
           m_BoolArgument: 0
         m_CallState: 2
+  tileSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!65 &1650440504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17436,6 +17478,8 @@ MonoBehaviour:
           m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
+  tileSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!65 &1965332438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18761,8 +18805,8 @@ SceneRoots:
   - {fileID: 1758009707}
   - {fileID: 1759065499}
   - {fileID: 539003305}
+  - {fileID: 609503801}
   - {fileID: 1940356711}
   - {fileID: 996000148}
-  - {fileID: 609503801}
   - {fileID: 668133576}
   - {fileID: 1591722654}
