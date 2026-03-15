@@ -28,11 +28,10 @@ public class inventory : MonoBehaviour
     public Image hat3Image;
 
     [Header("Costs")]
-    public int hat1Cost = 25;
-    public int hat2Cost = 30;
-    public int hat3Cost = 35;
+    public int hat1Cost = 20;
+    public int hat2Cost = 25;
+    public int hat3Cost = 30;
 
-    // 0 = none, 1 = goggles, 2 = kilt, 3 = hat
     private int equippedItem = 0;
 
     //buying items variables
@@ -61,7 +60,6 @@ public class inventory : MonoBehaviour
 
     void EquipItem(int item)
     {
-        // turn everything off first
         if (gogglesOnPenguin) gogglesOnPenguin.SetActive(false);
         if (kiltOnPenguin) kiltOnPenguin.SetActive(false);
         if (hatOnPenguin) hatOnPenguin.SetActive(false);
@@ -71,7 +69,6 @@ public class inventory : MonoBehaviour
 
         equippedItem = item;
 
-        // turn on the selected one
         if (item == 1)
         {
             if (gogglesOnPenguin) gogglesOnPenguin.SetActive(true);
@@ -188,7 +185,7 @@ public class inventory : MonoBehaviour
         if (litterScript.Currency >= hat1Cost && !litterScript.hat1Bought)
         {
             litterScript.Currency -= hat1Cost;
-            litterScript.currencyText.text = litterScript.Currency.ToString();
+            litterScript.UpdateCurrencyText();
             litterScript.hat1Bought = true;
             EquipItem(1);
         }
@@ -200,7 +197,7 @@ public class inventory : MonoBehaviour
         if (litterScript.Currency >= hat2Cost && !litterScript.hat2Bought)
         {
             litterScript.Currency -= hat2Cost;
-            litterScript.currencyText.text = litterScript.Currency.ToString();
+            litterScript.UpdateCurrencyText();
             litterScript.hat2Bought = true;
             EquipItem(2);
         }
@@ -212,7 +209,7 @@ public class inventory : MonoBehaviour
         if (litterScript.Currency >= hat3Cost && !litterScript.hat3Bought)
         {
             litterScript.Currency -= hat3Cost;
-            litterScript.currencyText.text = litterScript.Currency.ToString();
+            litterScript.UpdateCurrencyText();
             litterScript.hat3Bought = true;
             EquipItem(3);
         }
@@ -223,7 +220,6 @@ public class inventory : MonoBehaviour
     public void toggleGoggles()
     {
         if (!litterScript.hat1Bought) return;
-        // if already equipped toggle off, otherwise equip
         if (equippedItem == 1) EquipItem(0);
         else EquipItem(1);
     }
