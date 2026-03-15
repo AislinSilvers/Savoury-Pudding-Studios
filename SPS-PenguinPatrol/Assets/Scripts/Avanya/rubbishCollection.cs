@@ -17,7 +17,7 @@ public class rubbishCollection : MonoBehaviour, IDataPersistence
 
     void Start()
     {
-        Currency = 20;
+        Currency = 0;
         UpdateCurrencyText();
     }
 
