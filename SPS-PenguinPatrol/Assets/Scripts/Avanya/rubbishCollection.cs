@@ -17,7 +17,6 @@ public class rubbishCollection : MonoBehaviour, IDataPersistence
 
     void Start()
     {
-        Currency = 0;
         UpdateCurrencyText();
     }
 
@@ -60,13 +59,16 @@ public class rubbishCollection : MonoBehaviour, IDataPersistence
     //cybelle added save data info
     public void LoadData(GameData data)
     {
+        Currency = data.currency;
         hat1Bought = data.hatOne;
         hat2Bought = data.hatTwo;
         hat3Bought = data.hatThree;
+        UpdateCurrencyText();
     }
 
     public void SaveData(ref GameData data)
     {
+        data.currency = Currency;
         data.hatOne = hat1Bought;
         data.hatTwo = hat2Bought;
         data.hatThree = hat3Bought;

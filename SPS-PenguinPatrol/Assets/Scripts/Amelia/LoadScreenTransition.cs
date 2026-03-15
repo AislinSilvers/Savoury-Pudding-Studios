@@ -14,7 +14,6 @@ public class LoadSceneTransition : MonoBehaviour
     {
         // load different scene depending on where we came from
         string lastScene = PlayerPrefs.GetString("LastScene");
-
         if (lastScene == "Antarctica")
         {
             SceneManager.LoadScene("Highlands");
@@ -25,7 +24,6 @@ public class LoadSceneTransition : MonoBehaviour
         }
         else
         {
-            // default fallback
             SceneManager.LoadScene("Highlands");
         }
     }
