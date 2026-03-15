@@ -1221,6 +1221,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70260264}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &76551039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6235282307693242849, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+  m_PrefabInstance: {fileID: 1469874413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &82934018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8438,6 +8443,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a44498910d7b5e44eb7ee87d368759f9, type: 3}
   m_PrefabInstance: {fileID: 626378197}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &631036883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 672219250068567494, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+  m_PrefabInstance: {fileID: 1469874413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &634927187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8605,6 +8615,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 498582, guid: f7bda82af2b046744b37f8561b36129c, type: 3}
   m_PrefabInstance: {fileID: 642420825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &652079854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6351259466178507145, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+  m_PrefabInstance: {fileID: 1469874413}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &659714996
 PrefabInstance:
@@ -16398,6 +16413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5996883571488039718, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22976,15 +22995,15 @@ PrefabInstance:
     - target: {fileID: 360579861216336078, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: hat1Button
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 76551039}
     - target: {fileID: 360579861216336078, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: hat2Button
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 631036883}
     - target: {fileID: 360579861216336078, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: hat3Button
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 652079854}
     - target: {fileID: 360579861216336078, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: currencyText
       value: 
