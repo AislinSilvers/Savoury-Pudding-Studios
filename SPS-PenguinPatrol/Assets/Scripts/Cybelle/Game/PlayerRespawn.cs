@@ -9,13 +9,14 @@ public class PlayerRespawn : MonoBehaviour,  IDataPersistence
 {
     public Vector3 respawnPoint;
     public GameData data;
+    public GameObject player;
     //public GameObject player;
 
     //public Spawnplayer playerPosData;
 
     public void Awake()
     {
-       transform.position = data.playerPosition;
+       //transform.position = data.playerPosition;
        //playerPosData = FindObjectOfType<Spawnplayer>();
        //playerPosData.PlayerPosLoad();
        
@@ -24,7 +25,8 @@ public class PlayerRespawn : MonoBehaviour,  IDataPersistence
     public void RespawnNow()
     {
         //set player position, so that they reset.
-        transform.position = respawnPoint;
+        Debug.Log("respawn");
+        player.transform.position = respawnPoint;
         
     }
 

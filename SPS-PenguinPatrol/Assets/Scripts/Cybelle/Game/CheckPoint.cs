@@ -23,6 +23,10 @@ public class CheckPoint : MonoBehaviour
         }
     }
 
+    public void Stuck()
+    {
+        playerRespawn.respawnPoint = transform.position;
+    }
    
 }
 

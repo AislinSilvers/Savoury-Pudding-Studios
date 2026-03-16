@@ -5,6 +5,7 @@ public class FootSteps : MonoBehaviour
 
     public AudioSource audioSource;
     private Vector3 lastPosition;
+    public bool isWalking;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +17,7 @@ public class FootSteps : MonoBehaviour
     {
        
         // Check if the player has moved since the last frame
-        if (transform.position != lastPosition)
+        if (transform.position != lastPosition && isWalking)
         {
             // If the player is moving and the sound is not already playing, play the sound
             if (!audioSource.isPlaying)

@@ -3927,6 +3927,7 @@ MonoBehaviour:
         m_CallState: 2
   tileSound: {fileID: 0}
   audioSource: {fileID: 0}
+  canTrigger: 0
 --- !u!65 &340311447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7113,6 +7114,7 @@ MonoBehaviour:
         m_CallState: 2
   tileSound: {fileID: 0}
   audioSource: {fileID: 0}
+  canTrigger: 0
 --- !u!65 &771505056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10350,9 +10352,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3563274188981499104, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: 82dba036756f7a08dbde4831e43ab9e0, type: 2}
+    - target: {fileID: 4060734550791370142, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: respawnPoint.x
+      value: -1.49
+      objectReference: {fileID: 0}
     - target: {fileID: 4060734550791370142, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: respawnPoint.y
-      value: 5
+      value: -3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4060734550791370142, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: respawnPoint.z
+      value: 6.19
       objectReference: {fileID: 0}
     - target: {fileID: 4060734550791370142, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: lastSafePosition.y
@@ -10368,15 +10382,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8237307509435824426, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 8237307509435824426, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 8237307509435824426, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.19
       objectReference: {fileID: 0}
     - target: {fileID: 8237307509435824426, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11416,6 +11430,7 @@ MonoBehaviour:
         m_CallState: 2
   tileSound: {fileID: 0}
   audioSource: {fileID: 0}
+  canTrigger: 0
 --- !u!65 &1118972916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12119,6 +12134,7 @@ MonoBehaviour:
         m_CallState: 2
   tileSound: {fileID: 0}
   audioSource: {fileID: 0}
+  canTrigger: 0
 --- !u!65 &1168570194
 BoxCollider:
   m_ObjectHideFlags: 0
