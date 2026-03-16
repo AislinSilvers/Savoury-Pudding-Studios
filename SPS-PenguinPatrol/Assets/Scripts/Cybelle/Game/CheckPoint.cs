@@ -6,6 +6,7 @@ public class CheckPoint : MonoBehaviour
 {
     private PlayerRespawn playerRespawn;
     
+    
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,8 @@ public class CheckPoint : MonoBehaviour
             
         }
     }
+
+   
 }
 
 

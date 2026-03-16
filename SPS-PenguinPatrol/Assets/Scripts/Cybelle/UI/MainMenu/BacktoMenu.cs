@@ -17,8 +17,9 @@ public class BacktoMenu : MonoBehaviour
 
     public void BackButton()
     {
-        save.SaveGame();
+        
         PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
+        save.SaveGame();
         SceneManager.LoadSceneAsync("Menu");
         
     }

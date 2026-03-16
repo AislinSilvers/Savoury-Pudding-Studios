@@ -20,6 +20,9 @@ public class GameData
     public bool firstLoadArtic;
     public bool firstLoadHigh;
     public bool firstLoadCave;
+    public bool overRide;
+
+    public long lastUpdated;
 
     // the values defined in this constructor will be the default values
     // the game starts with when there's no data to load
@@ -36,9 +39,11 @@ public class GameData
         hatThree = false;
 
         currency = 0;
+        // position loading being a pain gonna have like a checkpoint based
+        //firstLoadArtic = true;
+        //firstLoadHigh = true;
+        //firstLoadCave = true;
 
-        firstLoadArtic = true;
-        firstLoadHigh = true;
-        firstLoadCave = true;
+        //overRide = true;
     }
 }
