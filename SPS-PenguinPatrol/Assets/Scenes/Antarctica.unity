@@ -18473,10 +18473,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3136996174828671850, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+    - {fileID: 1751458009282330609, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+--- !u!114 &1469874414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2517010392889504304, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+  m_PrefabInstance: {fileID: 1469874413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1471506001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25689,7 +25702,7 @@ PrefabInstance:
     - target: {fileID: 360579861216336078, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: hudCurrencyText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1469874414}
     - target: {fileID: 1618374606116834342, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_IsActive
       value: 0
