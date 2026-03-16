@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //got from https://www.youtube.com/watch?v=W7UGintd7ek
 //this is old code from prevouse game, deleted stuff not needed. rewated video to make sure it works as intended.
 
-public class PlayerRespawn : MonoBehaviour
+public class PlayerRespawn : MonoBehaviour,  IDataPersistence
 {
     public Vector3 respawnPoint;
-    public Vector3 lastSafePosition;
+    public GameData data;
+
 
 
     public void RespawnNow()
     {
-        transform.position = lastSafePosition;
+        transform.position = respawnPoint;
         
     }
 
@@ -23,6 +25,19 @@ public class PlayerRespawn : MonoBehaviour
             RespawnNow();
         }
     }
+
+     public void LoadData(GameData data)
+    {
+      transform.position = data.playerPosition;
+       
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = respawnPoint;
+        
+    }
+    
 
    
 }

@@ -9,6 +9,9 @@ public class MainMenu : Menu
     [Header("Menu Buttons")]
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button contuineGameButton;
+    [SerializeField] private Button settingsButton;
+    [SerializeField] private Button aboutButton;
+    [SerializeField] private Button quitButton;
 
 
     private void Start()
@@ -49,6 +52,9 @@ public class MainMenu : Menu
     {
         newGameButton.interactable = false;
         contuineGameButton.interactable = false;
+        settingsButton.interactable = false;
+        aboutButton.interactable = false;
+        quitButton.interactable = false;
 
     }
 }

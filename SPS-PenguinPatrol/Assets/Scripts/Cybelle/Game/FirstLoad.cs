@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FirstLoad : MonoBehaviour, IDataPersistence
 {
+    //fixed a like postition start code with code no longer used.
     public playerData playerScript;
     public bool articLoad;
     public bool highLoad;
@@ -10,7 +11,7 @@ public class FirstLoad : MonoBehaviour, IDataPersistence
 
     public string currentScene = "Antarctica";
     
-    void Start()
+    void Awake()
     {
         playerScript = GameObject.Find("Player").GetComponent<playerData>();
 
@@ -54,6 +55,7 @@ public class FirstLoad : MonoBehaviour, IDataPersistence
         articLoad = data.firstLoadArtic;
         highLoad = data.firstLoadHigh;
         caveLoad = data.firstLoadCave;
+        
        
     }
 
@@ -63,5 +65,6 @@ public class FirstLoad : MonoBehaviour, IDataPersistence
         data.firstLoadArtic = articLoad;
         data.firstLoadHigh = highLoad;
         data.firstLoadCave = caveLoad;
+        
     }
 }
