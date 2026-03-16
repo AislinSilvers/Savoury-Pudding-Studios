@@ -11308,6 +11308,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3305264833051791976, guid: 940b8470f236bf14c92a47135b178e5c, type: 3}
+--- !u!1 &970828993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7361118030040872873, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
+  m_PrefabInstance: {fileID: 8552680051493904836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &971819630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22945,7 +22950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 957261624780530444, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.443
+      value: -16.92
       objectReference: {fileID: 0}
     - target: {fileID: 957261624780530444, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23000,13 +23005,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5983262198944525966, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
+      propertyPath: chickObject
+      value: 
+      objectReference: {fileID: 970828993}
+    - target: {fileID: 5983262198944525966, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 943131883}
-    - target: {fileID: 5983262198944525966, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
-      propertyPath: followOffset.x
-      value: -0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7361118030040872873, guid: caae800a98841ecf5b3042e59df15c15, type: 3}
       propertyPath: m_Name
       value: Baby
