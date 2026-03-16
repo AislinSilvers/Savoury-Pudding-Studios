@@ -29,12 +29,17 @@ public class GameMenu : MonoBehaviour
    
     public DataPersistenceManager save;
     public PauseMenu pause;
+    public GameData data;
+    public PlayerRespawn respawn;
+    //public Spawnplayer playerPosData;
 
     public void Start()
     {
         gameMenu.SetActive(true);
         save = GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>();
+        respawn = GameObject.Find("Player").GetComponent<PlayerRespawn>();
         pause = GetComponent<PauseMenu>();
+        //playerPosData = FindObjectOfType<Spawnplayer>();
     }
     public void Hint()
     {
@@ -90,9 +95,15 @@ public class GameMenu : MonoBehaviour
     {
         if (backToMainButton)
         {
-            save.SaveGame();
+            //cybelle added stuff, kept the jason file save location and prefs scenes since i dont know how to save scenes in jason
+            //it sometimes works, usally dosent save player position and load form beggining but at least it saves what level you are on.
+            data.playerPosition = respawn.respawnPoint;
+            //playerPosData.PlayerPosSave(); //this was for the second attemp, it did not work and i dont like how the code is writen
             PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
-            SceneManager.LoadScene(1);
+            PlayerPrefs.SetInt("SavedLoad", 5);
+            save.SaveGame();
+            //not cybelles line of code, below this
+            SceneManager.LoadScene(0);
             
         }
     }

@@ -4,8 +4,10 @@ using UnityEngine.InputSystem;
 //(this is all old refs) used the playlist by chonk on youtube https://www.youtube.com/playlist?list=PLBcfp6HMOJwzDcdCzoAx3jJKm7sIcBXJZ to 
 //learn the input system and be able to make the player move
 //ended up changing the movemnt code from character controller to ridgid body
+
 //will delete the old code to keep it clean, if need it its in the older github pushes
 //hoping to use the ray cast from the https://www.youtube.com/watch?v=qdskE8PJy6Q in the updated code (not used as of yet)
+
 //ended up scraping the old code completly and am using new code with ridgid body and input system.https://www.youtube.com/watch?v=1LtePgzeqjQ
 //this is code from unity, has basic movemnt and jumping
 [RequireComponent(typeof(CharacterController))]
