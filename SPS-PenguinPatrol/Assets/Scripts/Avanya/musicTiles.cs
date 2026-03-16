@@ -10,17 +10,34 @@ public class musicTiles : MonoBehaviour
     [Header("Sound")]
     public AudioClip tileSound;
     public AudioSource audioSource;
+    public bool canTrigger;
+
+    void Start()
+    {
+        canTrigger = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "Player" && (canTrigger = true))
         {
             if (audioSource && tileSound)
                 audioSource.PlayOneShot(tileSound);
-            Debug.Log("banana");
+            canTrigger = false;
 
             tileHit.Invoke();
             Instantiate(musicParticles, transform.position, Quaternion.identity);
+
+            Debug.Log(canTrigger);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            canTrigger = true;
+
         }
     }
 }
