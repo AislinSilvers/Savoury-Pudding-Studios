@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class LoadSceneTransition : MonoBehaviour
 {
     public float waitTime = 10f;
+    
 
     void Start()
     {
         Invoke("LoadNextScene", waitTime);
+        
     }
 
     void LoadNextScene()
@@ -17,14 +19,17 @@ public class LoadSceneTransition : MonoBehaviour
         if (lastScene == "Antarctica")
         {
             SceneManager.LoadScene("Highlands");
+           
         }
         else if (lastScene == "Highlands")
         {
             SceneManager.LoadScene("Caves");
+            
         }
         else
         {
             SceneManager.LoadScene("Highlands");
+           
         }
     }
 }

@@ -17,6 +17,9 @@ public class GameData
     public bool hatTwo;
     public bool hatThree;
     public int currency;
+    public bool firstLoadArtic;
+    public bool firstLoadHigh;
+    public bool firstLoadCave;
 
     // the values defined in this constructor will be the default values
     // the game starts with when there's no data to load
@@ -33,5 +36,9 @@ public class GameData
         hatThree = false;
 
         currency = 0;
+
+        firstLoadArtic = true;
+        firstLoadHigh = true;
+        firstLoadCave = true;
     }
 }
