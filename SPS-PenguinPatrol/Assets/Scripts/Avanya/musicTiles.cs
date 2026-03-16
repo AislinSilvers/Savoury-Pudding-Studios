@@ -17,6 +17,7 @@ public class musicTiles : MonoBehaviour
         {
             if (audioSource && tileSound)
                 audioSource.PlayOneShot(tileSound);
+            Debug.Log("banana");
 
             tileHit.Invoke();
             Instantiate(musicParticles, transform.position, Quaternion.identity);
