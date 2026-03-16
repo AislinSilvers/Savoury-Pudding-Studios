@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameMenu : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class GameMenu : MonoBehaviour
     }
     public void Hint()
     {
-        if (hintButton)
+        if (hintButton || Input.GetButtonDown("Help"))
         {
             hintMenu.SetActive(true);
         }
