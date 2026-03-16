@@ -3474,7 +3474,6 @@ GameObject:
   - component: {fileID: 2179698136115236889}
   - component: {fileID: 4668903144471615377}
   - component: {fileID: 5337979606664332949}
-  - component: {fileID: 5969828340582695466}
   - component: {fileID: 4724071626346482368}
   m_Layer: 5
   m_Name: InventoryCanvas
@@ -3586,21 +3585,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelToHide: {fileID: 8357104958219521922}
---- !u!114 &5969828340582695466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8357104958219521922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9535226dbc5201bb0714171454cffc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstSelected: {fileID: 3757673129886953608}
-  newGameButton: {fileID: 0}
-  contuineGameButton: {fileID: 0}
 --- !u!114 &4724071626346482368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4207,17 +4191,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &3757673129886953608 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6373066490346697321, guid: 81c590947fc0d574b881c426ca7d9bed, type: 3}
-  m_PrefabInstance: {fileID: 7805936594124161761}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972296620740806323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &7589225605320462900 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 362004870524473557, guid: 81c590947fc0d574b881c426ca7d9bed, type: 3}
