@@ -226,7 +226,6 @@ GameObject:
   - component: {fileID: 8681933250468442901}
   - component: {fileID: 7543957986640165939}
   - component: {fileID: 6436307173096264023}
-  - component: {fileID: 552521062733510661}
   - component: {fileID: 2329868544758914511}
   m_Layer: 5
   m_Name: DialogueCanvas
@@ -350,22 +349,10 @@ MonoBehaviour:
   portrait: {fileID: 6015588306508091098}
   actorName: {fileID: 4446661994822258408}
   dialogueText: {fileID: 7313363755797215418}
-  continueButton: []
+  continueButton:
+  - {fileID: 3262741257130764871}
   choiceButtons: []
   isDialogueActive: 0
---- !u!114 &552521062733510661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2828935892869316721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18dc7f8c4fc0cbcd9ebf7cfa8e05b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstSelected: {fileID: 3262741257130764871}
 --- !u!114 &2329868544758914511
 MonoBehaviour:
   m_ObjectHideFlags: 0
