@@ -1532,9 +1532,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7771537047204706215, guid: 4d2cc9e401d9d1f4088869debad3c99c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2068501596}
-    - targetCorrespondingSourceObject: {fileID: 7771537047204706215, guid: 4d2cc9e401d9d1f4088869debad3c99c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2068501595}
     - targetCorrespondingSourceObject: {fileID: 7298414614741130589, guid: 4d2cc9e401d9d1f4088869debad3c99c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 140036578}
@@ -3228,35 +3225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2068501595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068501590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 9
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 608147616}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &2068501596
 MonoBehaviour:
   m_ObjectHideFlags: 0
