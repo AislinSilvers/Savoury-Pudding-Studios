@@ -21273,6 +21273,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7175121077778988888, guid: c9a191ddb9714d34fbb3f9f1c399c2d1, type: 3}
   m_PrefabInstance: {fileID: 1764221564}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &1764221566 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7543957986640165939, guid: c9a191ddb9714d34fbb3f9f1c399c2d1, type: 3}
+  m_PrefabInstance: {fileID: 1764221564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1770908420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26457,6 +26462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCFox
       objectReference: {fileID: 0}
+    - target: {fileID: 8171601283662070270, guid: 6cc271777fb2a2746b98461392611d06, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 1764221566}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26532,6 +26541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2902885491764275024, guid: 9e4fda52f8565494db36cd4cc2d719de, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 1764221566}
     - target: {fileID: 2908114427321869263, guid: 9e4fda52f8565494db36cd4cc2d719de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.3978
@@ -26646,6 +26659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4423096654368338894, guid: dc3ed7ceff428f241939a947f5f9d53b, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 1764221566}
     - target: {fileID: 5066227077304096313, guid: dc3ed7ceff428f241939a947f5f9d53b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 464.13

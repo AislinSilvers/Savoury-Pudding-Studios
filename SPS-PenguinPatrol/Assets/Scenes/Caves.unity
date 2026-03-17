@@ -4334,6 +4334,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7175121077778988888, guid: c9a191ddb9714d34fbb3f9f1c399c2d1, type: 3}
   m_PrefabInstance: {fileID: 203163529}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &203163531 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7543957986640165939, guid: c9a191ddb9714d34fbb3f9f1c399c2d1, type: 3}
+  m_PrefabInstance: {fileID: 203163529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &210901162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 402578, guid: 48cefa72938424042ac53e6f1523c01f, type: 3}
@@ -4351,14 +4356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCRat
       objectReference: {fileID: 0}
-    - target: {fileID: 8302130206086933787, guid: 6e5cf0f635a53474c856dee198925785, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 5038004788708804016, guid: 6e5cf0f635a53474c856dee198925785, type: 3}
+      propertyPath: canvasGroup
       value: 
-      objectReference: {fileID: 21300000, guid: faaa5e43b9ed043489502633e05c0418, type: 3}
-    - target: {fileID: 8302130206086933787, guid: 6e5cf0f635a53474c856dee198925785, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 203163531}
     - target: {fileID: 8519289258717576536, guid: 6e5cf0f635a53474c856dee198925785, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4
@@ -7448,14 +7449,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1871845238077170399, guid: c2d2c97c323359f44b044864bdb23108, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 791729562189422006, guid: c2d2c97c323359f44b044864bdb23108, type: 3}
+      propertyPath: canvasGroup
       value: 
-      objectReference: {fileID: 21300000, guid: faaa5e43b9ed043489502633e05c0418, type: 3}
-    - target: {fileID: 1871845238077170399, guid: c2d2c97c323359f44b044864bdb23108, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 203163531}
     - target: {fileID: 2316542976997670422, guid: c2d2c97c323359f44b044864bdb23108, type: 3}
       propertyPath: m_Name
       value: NPCBear
@@ -24895,18 +24892,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5629912897422668167, guid: c1a0855c015460b4fa213796146b13b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faaa5e43b9ed043489502633e05c0418, type: 3}
-    - target: {fileID: 5629912897422668167, guid: c1a0855c015460b4fa213796146b13b6, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7905112699848302316, guid: c1a0855c015460b4fa213796146b13b6, type: 3}
       propertyPath: m_Name
       value: NPCMushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 9064879950789682693, guid: c1a0855c015460b4fa213796146b13b6, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 203163531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
