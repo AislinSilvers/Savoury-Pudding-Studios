@@ -9,7 +9,7 @@ public class DataPersistenceManager : MonoBehaviour
     //all this code was made form the same video as the GameData script, videos in that scripts notes
 
 
-     [Header("Debugging")]
+    [Header("Debugging")]
     [SerializeField] private bool initializeDataIfNull = false;
     
 
@@ -88,7 +88,7 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.LoadData(gameData);
         }
-
+        
         
     }
     public void SaveGame()
@@ -110,11 +110,12 @@ public class DataPersistenceManager : MonoBehaviour
 
         //save that data to file using data handler
         dataHandler.Save(gameData);
+        
 
     }
     private void OnApplicationQuit()
     {
-        
+        PlayerPrefs.SetInt("LoadSaved", 1);
         PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
         SaveGame();
     }

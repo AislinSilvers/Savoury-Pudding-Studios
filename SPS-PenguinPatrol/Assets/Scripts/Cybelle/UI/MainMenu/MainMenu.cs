@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MainMenu : Menu
 {
+    //scene laoding and saving from https://www.youtube.com/watch?v=faYY3BNmAeA
+
     [Header("Menu Buttons")]
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button contuineGameButton;
@@ -42,10 +44,21 @@ public class MainMenu : Menu
     public void OnContinueGameClicked()
 
     {
-        DisableMenuButtons();
+       
         Debug.Log ("Continue Game Clicked");
         //load next scene, becuase of data persisitance manager simulare to new game
-        SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SavedScene"));
+        //addded some player pref stuff so that it only loads a game when is has scene saved.
+        if(PlayerPrefs.GetInt("SavedLoad") == 5)
+        {
+            DisableMenuButtons();
+            SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SavedScene"));
+           
+        }
+        else
+        {
+            return;
+        }
+        
     }
 
     private void DisableMenuButtons()

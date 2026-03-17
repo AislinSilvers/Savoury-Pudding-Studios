@@ -4,8 +4,10 @@ using UnityEngine.InputSystem;
 //(this is all old refs) used the playlist by chonk on youtube https://www.youtube.com/playlist?list=PLBcfp6HMOJwzDcdCzoAx3jJKm7sIcBXJZ to 
 //learn the input system and be able to make the player move
 //ended up changing the movemnt code from character controller to ridgid body
+
 //will delete the old code to keep it clean, if need it its in the older github pushes
 //hoping to use the ray cast from the https://www.youtube.com/watch?v=qdskE8PJy6Q in the updated code (not used as of yet)
+
 //ended up scraping the old code completly and am using new code with ridgid body and input system.https://www.youtube.com/watch?v=1LtePgzeqjQ
 //this is code from unity, has basic movemnt and jumping
 [RequireComponent(typeof(CharacterController))]
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")]
     public Animator animator;
 
+    private FootSteps footSteps;
     private void OnEnable()
     {
         moveAction.action.Enable();
@@ -45,6 +48,11 @@ public class PlayerController : MonoBehaviour
     {
         moveAction.action.Disable();
         jumpAction.action.Disable();
+    }
+
+    void Start()
+    {
+        footSteps = GameObject.Find("Player").GetComponent<FootSteps>();
     }
 
     void Update()
@@ -73,10 +81,12 @@ public class PlayerController : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(move);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 15f * Time.deltaTime);
             animator.SetBool("isMoving", true);
+            footSteps.isWalking = true;
         }
         else
         {
             animator.SetBool("isMoving", false);
+            footSteps.isWalking = false;
         }
 
         if (groundedPlayer && jumpAction.action.WasPressedThisFrame())
@@ -86,6 +96,8 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
 
+
+        Physics.SyncTransforms();
         Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
         controller.Move(finalMove * Time.deltaTime);
 
@@ -99,6 +111,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Slide")
         {
             Debug.Log("slide");
+            footSteps.isWalking = false;
             playerSpeed = 20f;
             isSprinting = true;
             animator.SetBool("isSliding", true);
@@ -109,16 +122,19 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             animator.SetBool("isSwimming", true);
+            footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Mushroom")
         {
             jumpHeight = 5f;
+            footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Tunnel")
         {
             ThirdPersonCamera cam = Camera.main.GetComponent<ThirdPersonCamera>();
+            footSteps.isWalking = false;
             if (cam != null) cam.EnterTunnel();
         }
     }
@@ -128,6 +144,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Slide")
         {
             Debug.Log("stop");
+            footSteps.isWalking = false;
             //to call the bool, need to name the struct! i think i figuered it out, very simple but got it i think
             //i figuered it out such a simple thing but it works!!!!!
             playerSpeed = 5.0f;
@@ -139,16 +156,19 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             animator.SetBool("isSwimming", false);
+            footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Mushroom")
         {
             jumpHeight = 1.5f;
+            footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Tunnel")
         {
             ThirdPersonCamera cam = Camera.main.GetComponent<ThirdPersonCamera>();
+            footSteps.isWalking = false;
             if (cam != null) cam.ExitTunnel();
         }
     }
