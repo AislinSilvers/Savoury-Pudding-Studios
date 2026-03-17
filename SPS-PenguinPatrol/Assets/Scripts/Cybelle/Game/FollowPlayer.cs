@@ -8,6 +8,8 @@ public class FollowPlayer : MonoBehaviour
     public bool follow = false;
     public Vector3 followOffset = new Vector3(1.5f, 0f, -1f);
 
+    public SceneLoader portalToActivate;
+
     void Start()
     {
         follow = false;
@@ -18,6 +20,9 @@ public class FollowPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             follow = true;
+
+            if (portalToActivate != null)
+                portalToActivate.ActivatePortal();
         }
     }
 
