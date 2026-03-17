@@ -19,7 +19,7 @@ using UnityEngine.SceneManagement;
 public class GameData
 {
     //used data veriables
-    public Vector3 playerPosition;
+    //public Vector3 playerPosition;
     public bool hatOne;
     public bool hatTwo;
     public bool hatThree;
@@ -30,7 +30,7 @@ public class GameData
     public bool firstLoadArtic;
     public bool firstLoadHigh;
     public bool firstLoadCave;
-    public bool overRide;
+    //public bool overRide;
 
     //saved scenes
     //public string currentScene;
@@ -44,7 +44,7 @@ public class GameData
         //addes a value for saving the player posisiton
         //changed from Vector3.zero (0,0,0) to Y 3 so the player spawns above ground
         //if player still spawns underground, increase the Y value slightly
-        playerPosition = new Vector3(0, 3, 0);
+        //playerPosition = new Vector3(0, 3, 0);
         //this is probally the better way to do thing like more secuer and all that but its not working so i am mkaing a new code
         //with player prefabs, link to video helping me with that in its file.
 
@@ -56,9 +56,9 @@ public class GameData
         currency = 0;
         // position loading being a pain gonna have like a checkpoint based
         //why does it hate to save my location in scenes, i am gonna try to write in scens to save UGHHHHHHHHHH
-        //firstLoadArtic = true;
-        //firstLoadHigh = true;
-        //firstLoadCave = true;
+        firstLoadArtic = true;
+        firstLoadHigh = true;
+        firstLoadCave = true;
 
         //overRide = true;
 

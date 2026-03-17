@@ -18,8 +18,8 @@ public class playerData : MonoBehaviour, IDataPersistence
     
     void Update()
     {
-        this.transform.position = data.playerPosition;
-        overrideSpawnPosition = data.overRide;
+        //this.transform.position = data.playerPosition;
+        //overrideSpawnPosition = data.overRide;
         //Debug.Log(this.transform.position);
 
     }
@@ -35,14 +35,14 @@ public class playerData : MonoBehaviour, IDataPersistence
         {
             this.transform.position = startPosition;
         }
-        this.transform.position = data.playerPosition;
-        overrideSpawnPosition = data.overRide;
+        //this.transform.position = data.playerPosition;
+        //overrideSpawnPosition = data.overRide;
         
     }
 
     public void SaveData(ref GameData data)
     {
-        data.playerPosition = this.transform.position;
-        data.overRide = overrideSpawnPosition;
+        //data.playerPosition = this.transform.position;
+        //data.overRide = overrideSpawnPosition;
     }
 }
