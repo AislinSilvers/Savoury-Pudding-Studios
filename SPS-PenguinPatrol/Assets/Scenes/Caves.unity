@@ -4451,7 +4451,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: faaa5e43b9ed043489502633e05c0418, type: 3}
     - target: {fileID: 8302130206086933787, guid: 6e5cf0f635a53474c856dee198925785, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8519289258717576536, guid: 6e5cf0f635a53474c856dee198925785, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7406,7 +7406,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: faaa5e43b9ed043489502633e05c0418, type: 3}
     - target: {fileID: 1871845238077170399, guid: c2d2c97c323359f44b044864bdb23108, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2316542976997670422, guid: c2d2c97c323359f44b044864bdb23108, type: 3}
       propertyPath: m_Name
@@ -9341,7 +9341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 502663427}
   - component: {fileID: 502663426}
-  - component: {fileID: 502663428}
+  - component: {fileID: 502663429}
   m_Layer: 0
   m_Name: musicPuzzle
   m_TagString: Untagged
@@ -9369,9 +9369,9 @@ MonoBehaviour:
   onPuzzleSolved:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502663428}
-        m_TargetAssemblyTypeName: moveToTarget, Assembly-CSharp
-        m_MethodName: MoveCrystals
+      - m_Target: {fileID: 502663429}
+        m_TargetAssemblyTypeName: CavePuzzleSolve, Assembly-CSharp
+        m_MethodName: RaiseCrystals
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9404,7 +9404,7 @@ Transform:
   - {fileID: 324479331}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &502663428
+--- !u!114 &502663429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9413,9 +9413,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 502663425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acea3c35d656dad41ac930782480b643, type: 3}
+  m_Script: {fileID: 11500000, guid: b3ac282eb96942040aa78ea3d574c2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crystals: {fileID: 1494412631}
+  animSpeed: 2
+  startPos: {fileID: 633965078}
+  endPos: {fileID: 1490576741}
 --- !u!1001 &505642648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11689,9 +11693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crystals: {fileID: 1494412631}
-  startPosition: {x: 37.88545, y: 30.65794, z: -247.5211}
-  endPosition: {x: 37.88545, y: 46.04, z: -247.5211}
   animSpeed: 2
+  startPos: {fileID: 0}
+  endPos: {fileID: 0}
 --- !u!1 &610399396
 GameObject:
   m_ObjectHideFlags: 0
@@ -24541,7 +24545,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: faaa5e43b9ed043489502633e05c0418, type: 3}
     - target: {fileID: 5629912897422668167, guid: c1a0855c015460b4fa213796146b13b6, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7905112699848302316, guid: c1a0855c015460b4fa213796146b13b6, type: 3}
       propertyPath: m_Name

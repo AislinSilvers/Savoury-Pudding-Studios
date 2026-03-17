@@ -4,15 +4,21 @@ public class CavePuzzleSolve : MonoBehaviour
 {
     [Header("Crystal Object")]
     public Transform crystals;
-    public Vector3 startPosition;
-    public Vector3 endPosition;
+    // i changed these into objects because i felt it was easier than writing all the values manually lol 
+    // - avanya
+
+    //public Vector3 startPosition;
+    //public Vector3 endPosition;
     public float animSpeed = 2f;
+
+    public Transform startPos;
+    public Transform endPos;
 
     private bool animating = false;
 
     void Start()
     {
-        crystals.localPosition = startPosition;
+        crystals.localPosition = startPos.transform.position;
     }
 
     public void RaiseCrystals()
@@ -26,13 +32,14 @@ public class CavePuzzleSolve : MonoBehaviour
 
         crystals.localPosition = Vector3.Lerp(
             crystals.localPosition,
-            endPosition,
+            endPos.transform.position,
             animSpeed * Time.deltaTime
         );
 
-        if (Vector3.Distance(crystals.localPosition, endPosition) < 0.01f)
+        if (Vector3.Distance(crystals.localPosition, endPos.transform.position) < 0.01f)
         {
-            crystals.localPosition = endPosition;
+            // crystals.localPosition = endPosition;
+            crystals.localPosition = endPos.transform.position;
             animating = false;
         }
     }
