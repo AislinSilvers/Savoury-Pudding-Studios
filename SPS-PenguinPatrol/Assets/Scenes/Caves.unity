@@ -17127,6 +17127,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 81ac27ee166b2cb4dab20993f71458f6, type: 3}
   m_PrefabInstance: {fileID: 879624835}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &887290945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 887290946}
+  - component: {fileID: 887290947}
+  m_Layer: 0
+  m_Name: BabyPenguinSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &887290946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887290945}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -419.2233, y: -276.855, z: 226.63086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1245540030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &887290947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887290945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d808f28f17f3d3846b279a4c88110ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 2054153570}
+  checkAntarctica: 1
+  checkHighlands: 1
+  alwaysSpawnAntarctica: 1
+  alwaysSpawnHighlands: 1
+  babyAntarcticaPrefab: {fileID: 4019884558038515346, guid: 088d296e9eb0f8f458ba30be1e44fedc, type: 3}
+  babyHighlandsPrefab: {fileID: 1878310738829528889, guid: 8e9a10f42b9a26a4292267fe8b6dcbde, type: 3}
+  antarcticaOffset: {x: 1.5, y: 0, z: -2}
+  highlandsOffset: {x: -1.5, y: 0, z: -2}
 --- !u!1001 &895118464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22238,6 +22291,7 @@ Transform:
   - {fileID: 1354278308}
   - {fileID: 1843312733}
   - {fileID: 1650807828}
+  - {fileID: 887290946}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1258895752
