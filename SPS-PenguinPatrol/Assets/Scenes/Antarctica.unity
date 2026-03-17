@@ -10385,6 +10385,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a2c6bc4be33b96245b8bb887dab65df5, type: 3}
   m_PrefabInstance: {fileID: 911007758}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &913589162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+  m_PrefabInstance: {fileID: 1979710304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &915046281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15784,7 +15789,7 @@ PrefabInstance:
     - target: {fileID: 2779736943678249326, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
       propertyPath: goggles3DModel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 913589162}
     - target: {fileID: 2789094005800915087, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21569,9 +21574,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 84f4abeae1dff2243b82a3e77a5adac1, type: 2}
     - target: {fileID: 919132149155446097, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
       propertyPath: m_Name
       value: ski goggles LOW
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22645,6 +22662,10 @@ PrefabInstance:
       propertyPath: hudCurrencyText
       value: 
       objectReference: {fileID: 1467300585}
+    - target: {fileID: 7634728690653067287, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7826945426936834450, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_VolumeTrigger
       value: 
