@@ -7073,21 +7073,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
---- !u!4 &552708937
+--- !u!4 &552708937 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
   m_PrefabInstance: {fileID: 552708936}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694052886}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.857, y: -16.592001, z: 5.74349}
-  m_LocalScale: {x: 10.293597, y: 10.293596, z: 11.300186}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 460997895}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &553706332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8378,78 +8368,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d1176ca671a718642a47f8db0856d37e, type: 3}
   m_PrefabInstance: {fileID: 683446425}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &694052886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
-  m_PrefabInstance: {fileID: 552708936}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 552708937}
-  - component: {fileID: 694052888}
-  - component: {fileID: 694052887}
-  m_Layer: 0
-  m_Name: ski goggles LOW
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!23 &694052887
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
-  m_PrefabInstance: {fileID: 552708936}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694052886}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 84f4abeae1dff2243b82a3e77a5adac1, type: 2}
-  - {fileID: 8554655104631171556, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &694052888
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
-  m_PrefabInstance: {fileID: 552708936}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694052886}
-  m_Mesh: {fileID: -5331541809957153745, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
 --- !u!1 &700378576
 GameObject:
   m_ObjectHideFlags: 0
@@ -21603,6 +21521,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8fd30ae95dd6d8a45b8d9e2dd4f01ea4, type: 3}
   m_PrefabInstance: {fileID: 1976476195}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1979710304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2391586582796656521}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1466
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+      propertyPath: m_Name
+      value: ski goggles LOW
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+--- !u!4 &1979710305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
+  m_PrefabInstance: {fileID: 1979710304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1989431295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3864324954192586798, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
@@ -22716,7 +22696,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3563957361591419807, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2481329840277440418, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1979710305}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
 --- !u!4 &2391586582796656519 stripped
@@ -22735,6 +22718,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c353826632773cc449a1b9ccd76c74aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2391586582796656521 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2481329840277440418, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+  m_PrefabInstance: {fileID: 2391586582796656518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2391586582796656523 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4060734550791370142, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
