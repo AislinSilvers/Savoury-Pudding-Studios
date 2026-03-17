@@ -7,7 +7,6 @@ public class FollowPlayer : MonoBehaviour
     public float rotationSpeed = 5f;
     public bool follow = false;
     public Vector3 followOffset = new Vector3(1.5f, 0f, -1f);
-
     public SceneLoader portalToActivate;
 
     void Start()
@@ -20,7 +19,6 @@ public class FollowPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             follow = true;
-
             if (portalToActivate != null)
                 portalToActivate.ActivatePortal();
         }
@@ -30,9 +28,10 @@ public class FollowPlayer : MonoBehaviour
     {
         if (!follow) return;
 
+        // stay at exact same Y as player so it never clips
         Vector3 targetPosition = playerObject.transform.position +
                                  playerObject.transform.TransformDirection(followOffset);
-        targetPosition.y = transform.position.y;
+        targetPosition.y = playerObject.transform.position.y;
 
         transform.position = Vector3.Lerp(
             transform.position,
