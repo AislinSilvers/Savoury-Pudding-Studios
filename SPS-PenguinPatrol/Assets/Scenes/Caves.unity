@@ -17171,6 +17171,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d808f28f17f3d3846b279a4c88110ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  checkAntarctica: 0
+  checkHighlands: 0
+  alwaysSpawnAntarctica: 0
+  alwaysSpawnHighlands: 0
+  babyAntarcticaPrefab: {fileID: 0}
+  babyHighlandsPrefab: {fileID: 0}
+  antarcticaOffset: {x: 1.5, y: 0, z: -2}
+  highlandsOffset: {x: -1.5, y: 0, z: -2}
 --- !u!1001 &895118464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25749,18 +25758,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 92806953}
     m_Modifications:
     - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.33686364
-      objectReference: {fileID: 0}
-    - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.33148307
-      objectReference: {fileID: 0}
-    - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.48807326
-      objectReference: {fileID: 0}
-    - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5464169
       objectReference: {fileID: 0}
@@ -25803,18 +25800,6 @@ PrefabInstance:
     - target: {fileID: 5607819269926399345, guid: 45e0f06c750176947862c10346226439, type: 3}
       propertyPath: m_Name
       value: Portal blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445763112410648400, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.2603773
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445763112410648400, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.2603773
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445763112410648400, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.2603773
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
