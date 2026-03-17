@@ -9,6 +9,9 @@ public class FollowPlayer : MonoBehaviour
     public Vector3 followOffset = new Vector3(1.5f, 0f, -1f);
     public SceneLoader portalToActivate;
 
+    [Header("Save")]
+    public string babyID = "babyAntarctica";
+
     void Start()
     {
         follow = false;
@@ -19,16 +22,30 @@ public class FollowPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             follow = true;
+
+            SaveBaby();
+
             if (portalToActivate != null)
                 portalToActivate.ActivatePortal();
         }
+    }
+
+    void SaveBaby()
+    {
+        if (babyID == "babyAntarctica")
+            PlayerPrefs.SetInt("babyAntarctica", 1);
+        else if (babyID == "babyHighlands")
+            PlayerPrefs.SetInt("babyHighlands", 1);
+        else if (babyID == "babyCaves")
+            PlayerPrefs.SetInt("babyCaves", 1);
+
+        PlayerPrefs.Save();
     }
 
     void Update()
     {
         if (!follow) return;
 
-        // stay at exact same Y as player so it never clips
         Vector3 targetPosition = playerObject.transform.position +
                                  playerObject.transform.TransformDirection(followOffset);
         targetPosition.y = playerObject.transform.position.y;
