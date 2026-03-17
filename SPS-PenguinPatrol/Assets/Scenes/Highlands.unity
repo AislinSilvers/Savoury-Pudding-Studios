@@ -5907,38 +5907,16 @@ Transform:
   - {fileID: 609495350}
   m_Father: {fileID: 1506854205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &609495349
+--- !u!1 &609495349 stripped
 GameObject:
-  m_ObjectHideFlags: 8
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f306afba513ce740b7da84f0b5734e8, type: 3}
   m_PrefabInstance: {fileID: 1579772962}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 609495350}
-  - component: {fileID: 609495351}
-  m_Layer: 0
-  m_Name: 'BabyPenguin03_ANIM_Hover_v02 (Missing Prefab with guid: 3f306afba513ce740b7da84f0b5734e8)'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &609495350
+--- !u!4 &609495350 stripped
 Transform:
-  m_ObjectHideFlags: 8
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f306afba513ce740b7da84f0b5734e8, type: 3}
   m_PrefabInstance: {fileID: 1579772962}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609495349}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.52682656, z: -0, w: 0.84997284}
-  m_LocalPosition: {x: -18.951246, y: -1.7910001, z: 15.784}
-  m_LocalScale: {x: 12.745001, y: 12.745, z: 12.745001}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 603408506}
-  m_LocalEulerAnglesHint: {x: 0, y: 63.583, z: 0}
 --- !u!95 &609495351
 Animator:
   serializedVersion: 7
@@ -8173,18 +8151,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1797117932}
     m_Modifications:
     - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.33658397
-      objectReference: {fileID: 0}
-    - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.33087495
-      objectReference: {fileID: 0}
-    - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2419646
-      objectReference: {fileID: 0}
-    - target: {fileID: 5516487406859467972, guid: 45e0f06c750176947862c10346226439, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.524
       objectReference: {fileID: 0}
@@ -8227,54 +8193,6 @@ PrefabInstance:
     - target: {fileID: 5607819269926399345, guid: 45e0f06c750176947862c10346226439, type: 3}
       propertyPath: m_Name
       value: Portal blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5898729871911122894, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5898729871911122894, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5898729871911122894, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149508684990454401, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.01166962
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149508684990454401, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.5622641
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149508684990454401, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.04753968
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769349589532163619, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769349589532163619, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769349589532163619, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445763112410648400, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.2603773
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445763112410648400, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.2603773
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445763112410648400, guid: 45e0f06c750176947862c10346226439, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.2603773
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9174,38 +9092,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917909458}
   m_CullTransparentMesh: 1
---- !u!1 &918003839
+--- !u!1 &918003839 stripped
 GameObject:
-  m_ObjectHideFlags: 8
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 80c62163a7bff1f4e83ff34cf6d43d0d, type: 3}
   m_PrefabInstance: {fileID: 616114099}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 918003840}
-  - component: {fileID: 918003841}
-  m_Layer: 0
-  m_Name: 'BabyPenguin02_ANIM_Hover_v02 (Missing Prefab with guid: 80c62163a7bff1f4e83ff34cf6d43d0d)'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &918003840
+--- !u!4 &918003840 stripped
 Transform:
-  m_ObjectHideFlags: 8
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80c62163a7bff1f4e83ff34cf6d43d0d, type: 3}
   m_PrefabInstance: {fileID: 616114099}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918003839}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.03508996, y: -0.93191975, z: 0.017935261, w: 0.36051723}
-  m_LocalPosition: {x: 3.1457167, y: 0.022934914, z: -5.8525324}
-  m_LocalScale: {x: 9.31053, y: 9.310533, z: 9.310529}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 603408506}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &918003841
 Animator:
   serializedVersion: 7
@@ -16786,6 +16682,7 @@ Transform:
   - {fileID: 1238832149}
   - {fileID: 1039840672}
   - {fileID: 2092783929}
+  - {fileID: 9108592907665552633}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1527501188
@@ -25387,6 +25284,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d808f28f17f3d3846b279a4c88110ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  checkAntarctica: 0
+  checkHighlands: 0
+  alwaysSpawnAntarctica: 0
+  alwaysSpawnHighlands: 0
+  babyAntarcticaPrefab: {fileID: 0}
+  babyHighlandsPrefab: {fileID: 0}
+  antarcticaOffset: {x: 1.5, y: 0, z: -2}
+  highlandsOffset: {x: -1.5, y: 0, z: -2}
 --- !u!1 &2094323130
 GameObject:
   m_ObjectHideFlags: 0
@@ -26777,6 +26683,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9a10f42b9a26a4292267fe8b6dcbde, type: 3}
+--- !u!4 &9108592907665552633 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8227013993330338026, guid: 8e9a10f42b9a26a4292267fe8b6dcbde, type: 3}
+  m_PrefabInstance: {fileID: 9108592907665552632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
