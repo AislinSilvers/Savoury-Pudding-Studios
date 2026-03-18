@@ -3087,7 +3087,6 @@ Transform:
   - {fileID: 1566143506}
   - {fileID: 1951950903}
   - {fileID: 1656003681}
-  - {fileID: 767682161}
   - {fileID: 1501778615}
   - {fileID: 949677193}
   - {fileID: 1304092966}
@@ -9298,37 +9297,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 453326, guid: 7c40fecf959af0d4cb489387c2bf6fa8, type: 3}
   m_PrefabInstance: {fileID: 767326008}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &767682160
-GameObject:
-  m_ObjectHideFlags: 8
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 767682161}
-  m_Layer: 0
-  m_Name: 'Pine_Tree_NoLeaves_crk_l_Snow_06 (Missing Prefab with guid: 3afed9f05fea09f4c9748ecddd1fbac6)'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &767682161
-Transform:
-  m_ObjectHideFlags: 8
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767682160}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7860801, z: -0, w: 0.61812466}
-  m_LocalPosition: {x: 114.6, y: -0.5, z: 98.8}
-  m_LocalScale: {x: 1.3546001, y: 1.3546, z: 1.3546001}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 246842890}
-  m_LocalEulerAnglesHint: {x: 0, y: -103.641, z: 0}
 --- !u!1 &768890775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8fd30ae95dd6d8a45b8d9e2dd4f01ea4, type: 3}
@@ -16619,10 +16587,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 974410365674983007, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 2391586582796656523}
     - target: {fileID: 1650669032133718089, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
       propertyPath: sceneLight
       value: 
@@ -16681,18 +16645,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3277635641389243807, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6499099649917908000, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209381157008960752, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8855516722921796581, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -23765,17 +23717,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7718496861860714227, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
   m_PrefabInstance: {fileID: 2391586582796656518}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2391586582796656523 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4060734550791370142, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
-  m_PrefabInstance: {fileID: 2391586582796656518}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114130534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 038dfb3de43e625e1a7cbfd8f005f3b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6726473678893733927
 PrefabInstance:
   m_ObjectHideFlags: 0
