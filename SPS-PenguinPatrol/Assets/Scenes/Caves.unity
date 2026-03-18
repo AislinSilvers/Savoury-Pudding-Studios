@@ -1157,6 +1157,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6491966, y: 2.7219884, z: 0.6797888}
   m_Center: {x: 0.071948044, y: 0.94838226, z: -0.083405465}
+--- !u!1 &72171705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72171706}
+  m_Layer: 0
+  m_Name: pianoEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &72171706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72171705}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000018626451, y: -0.86456436, z: 0.000000011175871, w: 0.5025223}
+  m_LocalPosition: {x: -36.81, y: 14.6, z: -21.72}
+  m_LocalScale: {x: 4.1150866, y: 4.0901756, z: 4.065289}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &73909258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9907,6 +9938,7 @@ GameObject:
   - component: {fileID: 502663427}
   - component: {fileID: 502663426}
   - component: {fileID: 502663429}
+  - component: {fileID: 502663430}
   m_Layer: 0
   m_Name: musicPuzzle
   m_TagString: Untagged
@@ -9936,6 +9968,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 502663429}
         m_TargetAssemblyTypeName: CavePuzzleSolve, Assembly-CSharp
+        m_MethodName: RaiseCrystals
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 502663430}
+        m_TargetAssemblyTypeName: movePiano, Assembly-CSharp
         m_MethodName: RaiseCrystals
         m_Mode: 1
         m_Arguments:
@@ -9986,6 +10030,22 @@ MonoBehaviour:
   startPos: {fileID: 633965078}
   endPos: {fileID: 1490576741}
   crystalMoveSound: {fileID: 8300000, guid: 63c0ab5f91ad834eb82347d044f811c6, type: 3}
+--- !u!114 &502663430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502663425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a31d3166d53ee4f958690c39177466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piano: {fileID: 434823908}
+  animSpeed: 2
+  startPos: {fileID: 1137490992}
+  endPos: {fileID: 72171706}
 --- !u!1001 &505642648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22430,6 +22490,37 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1137490991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137490992}
+  m_Layer: 0
+  m_Name: pianoStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1137490992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137490991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000018626451, y: -0.86456436, z: 0.000000011175871, w: 0.5025223}
+  m_LocalPosition: {x: -37.66595, y: 20.672665, z: -22.410467}
+  m_LocalScale: {x: 4.115084, y: 4.0901756, z: 4.0652866}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1143209490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 426000, guid: 9414f6ff92dc3224184431d751419ace, type: 3}
@@ -39586,6 +39677,8 @@ SceneRoots:
   - {fileID: 633965078}
   - {fileID: 1490576741}
   - {fileID: 111360412}
+  - {fileID: 72171706}
+  - {fileID: 1137490992}
   - {fileID: 434823908}
   - {fileID: 1494412631}
   - {fileID: 1163249931}
