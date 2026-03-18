@@ -49,17 +49,17 @@ public class MainMenu : Menu
         Debug.Log ("Continue Game Clicked");
         //load next scene, becuase of data persisitance manager simulare to new game
         //addded some player pref stuff so that it only loads a game when is has scene saved.
-        if(PlayerPrefs.GetInt("SavedLoad") == 5)
-        {
-            DisableMenuButtons();
+//        if(PlayerPrefs.GetInt("SavedLoad") == 5)
+//        {
+//            DisableMenuButtons();
             SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SavedScene"));
            
-        }
-        else
-        {
-            return;
-        }
-        
+//        }
+//        else
+//        {
+//            return;
+//        }
+//        
     }
 
     private void DisableMenuButtons()
