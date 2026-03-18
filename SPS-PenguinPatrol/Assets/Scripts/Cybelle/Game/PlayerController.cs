@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSource;
     //cybelle trying to get audio source to only play when character is walking not to much success 
     //public AudioSource footSource;
+    public AudioSource mushroomSource;
 
     public CharacterController controller;
     private Vector3 playerVelocity;
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityValue);
         }
+        
 
         playerVelocity.y += gravityValue * Time.deltaTime;
 
@@ -136,6 +138,12 @@ public class PlayerController : MonoBehaviour
             jumpHeight = 10f;
             //footSteps.isWalking = false;
         }
+          if (other.gameObject.tag == "Mushroom" && jumpAction.action.WasPressedThisFrame())
+        {
+            //jumpHeight = 10f;
+            //footSteps.isWalking = false;
+            mushroomSource.Play();
+        }
 
         if (other.gameObject.tag == "Tunnel")
         {
@@ -157,6 +165,10 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "FootSteps")
         {
             footSteps.enabled = true;
+        }
+         if(other.gameObject.tag == "MushroomArea")
+        {
+            footSteps.enabled = false;
         }
     }
 
@@ -181,10 +193,16 @@ public class PlayerController : MonoBehaviour
             //footSteps.isWalking = false;
         }
 
-        if (other.gameObject.tag == "Mushroom")
+        if (other.gameObject.tag == "Mushroom" && jumpAction.action.WasPressedThisFrame())
         {
             //jumpHeight = 3f;
             //footSteps.isWalking = false;
+            mushroomSource.Play();
+            
+        }
+         if(other.gameObject.tag == "MushroomArea")
+        {
+            footSteps.enabled = true;
         }
 
         if (other.gameObject.tag == "Tunnel")
