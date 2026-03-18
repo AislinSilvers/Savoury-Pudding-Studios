@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.015467245, y: 0.9275333, z: 0.0010361271, w: 0.3734189}
   m_LocalPosition: {x: 105.78, y: -19.75, z: -65.175}
-  m_LocalScale: {x: 0.19343282, y: 0.1934328, z: 0.29421684}
+  m_LocalScale: {x: 0.31615, y: 0.31615, z: 0.31615}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9013276565967685443}
@@ -129,10 +129,10 @@ MonoBehaviour:
   playerObject: {fileID: 0}
   smoothSpeed: 20
   rotationSpeed: 12
-  follow: 0
+  follow: 1
   followOffset: {x: 0.05, y: -2.84, z: -2.55}
   portalToActivate: {fileID: 0}
-  babyID: babyHighlands
+  babyID: babyAntarctica
 --- !u!65 &8634140223333789121
 BoxCollider:
   m_ObjectHideFlags: 0
