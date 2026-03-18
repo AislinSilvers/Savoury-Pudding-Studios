@@ -137,6 +137,12 @@ public class PlayerController : MonoBehaviour
             footSteps.isWalking = false;
             if (cam != null) cam.EnterTunnel();
         }
+
+        if (other.gameObject.tag == "WalkFaster")
+        {
+    
+            playerSpeed = 10f;
+        }
     }
 
     void OnTriggerExit(Collider other)
