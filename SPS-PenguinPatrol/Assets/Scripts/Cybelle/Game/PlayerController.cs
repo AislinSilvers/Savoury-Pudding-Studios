@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Mushroom")
         {
-            jumpHeight = 5f;
+            jumpHeight = 10f;
             footSteps.isWalking = false;
         }
 
@@ -142,6 +142,11 @@ public class PlayerController : MonoBehaviour
         {
     
             playerSpeed = 10f;
+        }
+         if (other.gameObject.tag == "JumpNormal")
+        {
+            jumpHeight = 3f;
+            
         }
     }
 
@@ -167,7 +172,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Mushroom")
         {
-            jumpHeight = 1.5f;
+            //jumpHeight = 3f;
             footSteps.isWalking = false;
         }
 
