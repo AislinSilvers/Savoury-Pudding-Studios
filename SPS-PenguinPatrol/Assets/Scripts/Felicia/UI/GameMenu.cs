@@ -10,16 +10,16 @@ public class GameMenu : MonoBehaviour
     [SerializeField] public GameObject gameMenu;
     [SerializeField] public GameObject pauseMenu;
     //[SerializeField] public GameObject saveMenu;
-    [SerializeField] public GameObject hintMenu;
+    //[SerializeField] public GameObject hintMenu;
     [SerializeField] public GameObject mapMenu;
     [SerializeField] public GameObject inventoryMenu;
     [SerializeField] public GameObject settingsMenu;
 
     [SerializeField] Button pauseButton;
     [SerializeField] Button resumeButton;
-    [SerializeField] Button hintButton;
-    [SerializeField] Button closeHintButton;
-    [SerializeField] Button savesButton;
+    //[SerializeField] Button hintButton;
+    //[SerializeField] Button closeHintButton;
+    //[SerializeField] Button savesButton;
     [SerializeField] Button mapButton;
     [SerializeField] Button inventoryButton;
     [SerializeField] Button settingsButton;
@@ -41,6 +41,8 @@ public class GameMenu : MonoBehaviour
         pause = GetComponent<PauseMenu>();
         //playerPosData = FindObjectOfType<Spawnplayer>();
     }
+
+    /*
     public void Hint()
     {
         if (hintButton || Input.GetButtonDown("Help"))
@@ -55,6 +57,8 @@ public class GameMenu : MonoBehaviour
             hintMenu.SetActive(false);
         }
     }
+    */
+
     public void Pause()
     {
         if (pauseButton)
