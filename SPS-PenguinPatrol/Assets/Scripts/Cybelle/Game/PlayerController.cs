@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool isSprinting;
 
     public AudioSource audioSource;
+    //cybelle trying to get audio source to only play when character is walking not to much success 
+    //public AudioSource footSource;
 
     public CharacterController controller;
     private Vector3 playerVelocity;
@@ -80,13 +82,16 @@ public class PlayerController : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(move);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 15f * Time.deltaTime);
+            //footSource.Play();
             animator.SetBool("isMoving", true);
-            footSteps.isWalking = true;
+            //footSteps.isWalking = true;
+           
         }
         else
         {
             animator.SetBool("isMoving", false);
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
+            //footSource.Stop();
         }
 
         if (groundedPlayer && jumpAction.action.WasPressedThisFrame())
@@ -100,6 +105,7 @@ public class PlayerController : MonoBehaviour
         Physics.SyncTransforms();
         Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
         controller.Move(finalMove * Time.deltaTime);
+        //footSource.Play();
 
         animator.SetBool("isJumping", !groundedPlayer);
     }
@@ -111,7 +117,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Slide")
         {
             Debug.Log("slide");
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
             playerSpeed = 20f;
             isSprinting = true;
             animator.SetBool("isSliding", true);
@@ -122,19 +128,19 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             animator.SetBool("isSwimming", true);
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Mushroom")
         {
             jumpHeight = 10f;
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Tunnel")
         {
             ThirdPersonCamera cam = Camera.main.GetComponent<ThirdPersonCamera>();
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
             if (cam != null) cam.EnterTunnel();
         }
 
@@ -148,6 +154,10 @@ public class PlayerController : MonoBehaviour
             jumpHeight = 3f;
             
         }
+        if(other.gameObject.tag == "FootSteps")
+        {
+            footSteps.enabled = true;
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -155,31 +165,32 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Slide")
         {
             Debug.Log("stop");
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
             //to call the bool, need to name the struct! i think i figuered it out, very simple but got it i think
             //i figuered it out such a simple thing but it works!!!!!
             playerSpeed = 5.0f;
             isSprinting = false;
             animator.SetBool("isSliding", false);
             audioSource.Stop();
+            
         }
 
         if (other.gameObject.tag == "Water")
         {
             animator.SetBool("isSwimming", false);
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Mushroom")
         {
             //jumpHeight = 3f;
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
         }
 
         if (other.gameObject.tag == "Tunnel")
         {
             ThirdPersonCamera cam = Camera.main.GetComponent<ThirdPersonCamera>();
-            footSteps.isWalking = false;
+            //footSteps.isWalking = false;
             if (cam != null) cam.ExitTunnel();
         }
     }

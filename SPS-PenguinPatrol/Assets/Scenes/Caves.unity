@@ -17580,7 +17580,7 @@ GameObject:
   - component: {fileID: 881009599}
   m_Layer: 0
   m_Name: Checkpoint (3)
-  m_TagString: Untagged
+  m_TagString: FootSteps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17594,7 +17594,7 @@ Transform:
   m_GameObject: {fileID: 881009597}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6846544, z: -0, w: 0.7288679}
-  m_LocalPosition: {x: -426.5, y: -187.46, z: 85.2}
+  m_LocalPosition: {x: -426.5, y: -183.7, z: 85.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20332,6 +20332,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f71caa865423b942995e7f427a888b1, type: 3}
+--- !u!82 &1081602553 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7718496861860714227, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+  m_PrefabInstance: {fileID: 1105660825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1081707223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21093,6 +21098,18 @@ PrefabInstance:
       propertyPath: respawnPoint.z
       value: -2.8899994
       objectReference: {fileID: 0}
+    - target: {fileID: 4718786195568489340, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: footSource
+      value: 
+      objectReference: {fileID: 1081602553}
+    - target: {fileID: 5871522543634735114, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718496861860714227, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: 1f76892d1b2d12614bde28638bd9e0d9, type: 2}
     - target: {fileID: 8237307509435824426, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -499.49
@@ -31362,7 +31379,7 @@ PrefabInstance:
     - target: {fileID: 8804681965661876769, guid: 09c99e8eab490794884f319ba99862e9, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: fae63c60801fbb7458e5e0d77b524e4a, type: 3}
+      objectReference: {fileID: 8300000, guid: ddcbf79f2acc4ef468cfb49df403ce3e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

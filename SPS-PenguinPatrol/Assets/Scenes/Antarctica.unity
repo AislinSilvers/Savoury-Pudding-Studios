@@ -9533,6 +9533,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 410258873293540530, guid: 617cb026bf306744fb6080023cc7932e, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e2e0307c08b72544ab6b88006285881, type: 3}
     - target: {fileID: 1306026364714468244, guid: 617cb026bf306744fb6080023cc7932e, type: 3}
       propertyPath: m_Name
       value: SoundUI
@@ -23351,6 +23355,10 @@ PrefabInstance:
       propertyPath: respawnPoint.z
       value: 34.34
       objectReference: {fileID: 0}
+    - target: {fileID: 4718786195568489340, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: footSource
+      value: 
+      objectReference: {fileID: 2391586582796656521}
     - target: {fileID: 7826945426936834450, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: m_VolumeTrigger
       value: 
@@ -23416,6 +23424,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c353826632773cc449a1b9ccd76c74aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2391586582796656521 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7718496861860714227, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+  m_PrefabInstance: {fileID: 2391586582796656518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2391586582796656523 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4060734550791370142, guid: c84ab000f18049f83a783d8f7800869b, type: 3}

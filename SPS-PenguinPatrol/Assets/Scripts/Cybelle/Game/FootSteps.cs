@@ -17,7 +17,7 @@ public class FootSteps : MonoBehaviour
     {
        
         // Check if the player has moved since the last frame
-        if (transform.position != lastPosition && isWalking)
+        if (transform.position != lastPosition)
         {
             // If the player is moving and the sound is not already playing, play the sound
             if (!audioSource.isPlaying)
