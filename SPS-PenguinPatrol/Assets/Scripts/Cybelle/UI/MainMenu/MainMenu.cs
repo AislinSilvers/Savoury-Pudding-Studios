@@ -39,6 +39,7 @@ public class MainMenu : Menu
         DataPersistenceManager.instance.NewGame();
         //loads game and saves game, because of the code in the data persistance manager
         SceneManager.LoadSceneAsync("Antarctica");
+
     }
 
     public void OnContinueGameClicked()
