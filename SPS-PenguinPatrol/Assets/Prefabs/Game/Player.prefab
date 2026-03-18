@@ -248,8 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {x: -1.49, y: 1.1, z: 6.19}
+  startPoint: {x: -499.49, y: -319.77, z: -1.15}
   data:
-    playerPosition: {x: 0, y: 3, z: 0}
     hatOne: 0
     hatTwo: 0
     hatThree: 0
@@ -258,7 +258,10 @@ MonoBehaviour:
     firstLoadArtic: 0
     firstLoadHigh: 0
     firstLoadCave: 0
-    overRide: 0
+  currentScene: Antarctica
+  articLoad: 1
+  highLoad: 1
+  caveLoad: 1
 --- !u!114 &5871522543634735114
 MonoBehaviour:
   m_ObjectHideFlags: 0

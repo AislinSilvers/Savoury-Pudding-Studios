@@ -28,7 +28,6 @@ public class musicTiles : MonoBehaviour
             tileHit.Invoke();
             Instantiate(musicParticles, transform.position, Quaternion.identity);
 
-            Debug.Log(canTrigger);
         }
     }
 

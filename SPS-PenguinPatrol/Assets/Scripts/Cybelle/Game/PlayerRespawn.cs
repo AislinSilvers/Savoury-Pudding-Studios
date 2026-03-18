@@ -8,17 +8,44 @@ using UnityEngine.SceneManagement;
 public class PlayerRespawn : MonoBehaviour,  IDataPersistence
 {
     public Vector3 respawnPoint;
+    public Vector3 startPoint;
     public GameData data;
-    //public GameObject player;
+    //public Transform spawn;
+
+     public string currentScene = "Antarctica";
+
+    public bool articLoad = true;
+    public bool highLoad = true;
+    public bool caveLoad = true;
 
     //public Spawnplayer playerPosData;
 
     public void Awake()
     {
-       //transform.position = data.playerPosition;
-       //playerPosData = FindObjectOfType<Spawnplayer>();
-       //playerPosData.PlayerPosLoad();
-       
+        transform.position = startPoint;
+        
+//
+//        if (currentScene == "Caves" && caveLoad)
+//        {
+//            transform.position = startPoint;
+//            //caveLoad = false;
+//        }
+//        else if (currentScene == "Highlands" && highLoad)
+//        {
+//             transform.position = startPoint;
+//            //highLoad = false;
+//        }
+//        else  if (currentScene == "Antarctica" && articLoad)
+//        {
+//              transform.position = startPoint;
+//            //articLoad = false;
+//        }
+//       
+    }
+
+    public void Start()
+    {
+       //transform.position = startPoint;
     }
 
     public void RespawnNow()
@@ -31,14 +58,20 @@ public class PlayerRespawn : MonoBehaviour,  IDataPersistence
      public void LoadData(GameData data)
     {
         //should load the player position
-      transform.position = data.playerPosition;
+      //transform.position = data.playerPosition;
+      //articLoad = data.firstLoadArtic;
+      //highLoad = data.firstLoadHigh;
+      //caveLoad = data.firstLoadCave;
        
     }
 
     public void SaveData(ref GameData data)
     {
         //saves the players position in the jason file, it does save i cna see it changing
-        data.playerPosition = respawnPoint;
+        //data.playerPosition = respawnPoint;
+        //data.firstLoadArtic = articLoad;
+        //data.firstLoadHigh = highLoad;
+        //data.firstLoadCave = caveLoad;
         
     }
     

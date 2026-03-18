@@ -10,9 +10,10 @@ public class RockData
 
 public class HighlandsPuzzleSolve : MonoBehaviour
 {
+
     public RockData[] rocks;
-    public float animSpeed = 2f;
     private bool animating = false;
+    public float animSpeed = 2f;
 
     void Start()
     {
