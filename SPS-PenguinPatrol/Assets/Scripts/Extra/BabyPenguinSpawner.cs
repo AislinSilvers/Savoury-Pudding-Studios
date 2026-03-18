@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// handles spawning any previously rescued baby penguins when entering a new biome
+// uses PlayerPrefs to check which babies have been saved, or can force spawn regardless
 public class BabyPenguinSpawner : MonoBehaviour
 {
     public GameObject playerObject;
@@ -22,6 +24,7 @@ public class BabyPenguinSpawner : MonoBehaviour
 
     void Start()
     {
+        // check if antarctica baby was rescued or if we always want it to spawn
         if (alwaysSpawnAntarctica || (checkAntarctica && PlayerPrefs.GetInt("babyAntarctica", 0) == 1))
         {
             GameObject baby = Instantiate(babyAntarcticaPrefab,
@@ -29,6 +32,7 @@ public class BabyPenguinSpawner : MonoBehaviour
             SetupFollow(baby, antarcticaOffset);
         }
 
+        // same for highlands baby
         if (alwaysSpawnHighlands || (checkHighlands && PlayerPrefs.GetInt("babyHighlands", 0) == 1))
         {
             GameObject baby = Instantiate(babyHighlandsPrefab,
@@ -37,6 +41,7 @@ public class BabyPenguinSpawner : MonoBehaviour
         }
     }
 
+    // sets up the follow script on the spawned baby so it starts following the player straight away
     void SetupFollow(GameObject baby, Vector3 offset)
     {
         FollowPlayer fp = baby.GetComponent<FollowPlayer>();
