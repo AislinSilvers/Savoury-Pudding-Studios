@@ -145,6 +145,7 @@ MonoBehaviour:
   jumpHeight: 3
   isSprinting: 0
   audioSource: {fileID: 6633287161686793840}
+  mushroomSource: {fileID: 0}
   controller: {fileID: 5951004522559580854}
   moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   jumpAction: {fileID: -2099379676528639254, guid: 052faaac586de48259a63d0c4782560b, type: 3}
@@ -247,8 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038dfb3de43e625e1a7cbfd8f005f3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {x: -1.49, y: 1.1, z: 6.19}
-  startPoint: {x: -499.49, y: -319.77, z: -1.15}
+  respawnPoint: {x: -5.49, y: 4.86, z: 6.91}
+  startPoint: {x: -5.49, y: 4.86, z: 6.91}
   data:
     hatOne: 0
     hatTwo: 0
@@ -258,7 +259,7 @@ MonoBehaviour:
     firstLoadArtic: 0
     firstLoadHigh: 0
     firstLoadCave: 0
-  currentScene: Antarctica
+  currentScene: Highlands
   articLoad: 1
   highLoad: 1
   caveLoad: 1
@@ -731,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8237307509435824426}
-  distance: 7
+  distance: 5
   height: 0.6
   verticalMinAngle: -20
   verticalMaxAngle: 60
@@ -1115,11 +1116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1466
+      value: -0.1455
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -0.0052
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1916aad6b36ba2409a5e9deb1417185, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1807,7 +1808,7 @@ PrefabInstance:
     - target: {fileID: 345880497617150290, guid: e240101b64bf3d8a187978df0376dd26, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 6418180475301049370, guid: defc490509727f75993e172a754a6062, type: 2}
+      objectReference: {fileID: 6418180475301049370, guid: 82dba036756f7a08dbde4831e43ab9e0, type: 2}
     - target: {fileID: 2810935535695922767, guid: e240101b64bf3d8a187978df0376dd26, type: 3}
       propertyPath: m_Name
       value: FootSteps
