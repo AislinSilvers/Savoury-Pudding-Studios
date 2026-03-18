@@ -2088,6 +2088,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16caa67e77d6f1448766dd47ec9994c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notesPlayed: 0
+  patternDone: 0
+  spawn1: {fileID: 365367896}
+  spawn2: {fileID: 523357354}
+  spawn3: {fileID: 1597312176}
+  spawn4: {fileID: 793653953}
+  spawn5: {fileID: 95549866}
+  drop: {fileID: 4736355098390197394, guid: 27e1832e3784196419dcf98602e19948, type: 3}
 --- !u!4 &112631630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 478246, guid: 97ae3eefcf7df5b49af73ac720a49414, type: 3}
@@ -3120,7 +3128,7 @@ GameObject:
   - component: {fileID: 166140638}
   - component: {fileID: 166140639}
   m_Layer: 0
-  m_Name: crystal3
+  m_Name: crystalBlue4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3176,7 +3184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicParticles: {fileID: 7061166686672682365, guid: 53fc4472bdc57234a91b3e804e7fe4ea, type: 3}
-  musicNumber: 3
+  musicNumber: 4
   tileHit:
     m_PersistentCalls:
       m_Calls:
@@ -3189,7 +3197,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 3
+          m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
   tileSound: {fileID: 0}
@@ -6686,7 +6694,7 @@ GameObject:
   - component: {fileID: 326249348}
   - component: {fileID: 326249349}
   m_Layer: 0
-  m_Name: crystal5
+  m_Name: crystalYellow1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6837,7 +6845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicParticles: {fileID: 7061166686672682365, guid: 53fc4472bdc57234a91b3e804e7fe4ea, type: 3}
-  musicNumber: 5
+  musicNumber: 1
   tileHit:
     m_PersistentCalls:
       m_Calls:
@@ -6850,7 +6858,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 5
+          m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
   tileSound: {fileID: 0}
@@ -9275,7 +9283,7 @@ GameObject:
   - component: {fileID: 443653391}
   - component: {fileID: 443653392}
   m_Layer: 0
-  m_Name: crytal4
+  m_Name: crytalGreen5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9362,7 +9370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicParticles: {fileID: 7061166686672682365, guid: 53fc4472bdc57234a91b3e804e7fe4ea, type: 3}
-  musicNumber: 4
+  musicNumber: 5
   tileHit:
     m_PersistentCalls:
       m_Calls:
@@ -9375,7 +9383,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 4
+          m_StringArgument: 5
           m_BoolArgument: 0
         m_CallState: 2
   tileSound: {fileID: 0}
@@ -9959,11 +9967,11 @@ Transform:
   m_LocalScale: {x: 12.75223, y: 6.406229, z: 12.73403}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 840398312}
+  - {fileID: 324479331}
   - {fileID: 871725091}
+  - {fileID: 840398312}
   - {fileID: 166140637}
   - {fileID: 441753582}
-  - {fileID: 324479331}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &502663429
@@ -17194,7 +17202,7 @@ GameObject:
   - component: {fileID: 842168073}
   - component: {fileID: 842168074}
   m_Layer: 0
-  m_Name: crystal1
+  m_Name: crystalRed3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17303,7 +17311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicParticles: {fileID: 7061166686672682365, guid: 53fc4472bdc57234a91b3e804e7fe4ea, type: 3}
-  musicNumber: 1
+  musicNumber: 3
   tileHit:
     m_PersistentCalls:
       m_Calls:
@@ -17316,7 +17324,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1
+          m_StringArgument: 3
           m_BoolArgument: 0
         m_CallState: 2
   tileSound: {fileID: 0}
@@ -17706,7 +17714,7 @@ GameObject:
   - component: {fileID: 871725092}
   - component: {fileID: 871725093}
   m_Layer: 0
-  m_Name: crystal2
+  m_Name: crystalPink2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
