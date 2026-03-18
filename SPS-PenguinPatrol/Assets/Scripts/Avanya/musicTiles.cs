@@ -9,7 +9,7 @@ public class musicTiles : MonoBehaviour
 
     [Header("Sound")]
     public AudioClip tileSound;
-    public AudioSource audioSource;
+    // public AudioSource audioSource;
     public bool canTrigger;
 
     void Start()
@@ -21,8 +21,9 @@ public class musicTiles : MonoBehaviour
     {
         if (other.transform.tag == "Player" && (canTrigger = true))
         {
-            if (audioSource && tileSound)
-                audioSource.PlayOneShot(tileSound);
+            // if (audioSource && tileSound)
+            //     audioSource.PlayOneShot(tileSound);
+            soundFXManager.instance.playSoundFXClip(tileSound, transform, 1.7f);
             canTrigger = false;
 
             tileHit.Invoke();

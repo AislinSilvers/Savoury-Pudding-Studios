@@ -14,6 +14,8 @@ public class CavePuzzleSolve : MonoBehaviour
     public Transform startPos;
     public Transform endPos;
 
+    public AudioClip crystalMoveSound;
+
     private bool animating = false;
 
     void Start()
@@ -24,6 +26,7 @@ public class CavePuzzleSolve : MonoBehaviour
     public void RaiseCrystals()
     {
         animating = true;
+        soundFXManager.instance.playSoundFXClip(crystalMoveSound, transform, 1f);
     }
 
     void Update()
