@@ -29,6 +29,7 @@ public class UI_MainMenu : MonoBehaviour
     {
         menuPanel.SetActive(true);  //auto activate main menu panel
     }
+
     public void StartGame()
     {
         if (startButton)
