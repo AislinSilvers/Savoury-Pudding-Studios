@@ -9968,6 +9968,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 4573651823816856808, guid: 617cb026bf306744fb6080023cc7932e, type: 3}
   m_PrefabInstance: {fileID: 804108541}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &804108545 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6836173643280263069, guid: 617cb026bf306744fb6080023cc7932e, type: 3}
+  m_PrefabInstance: {fileID: 804108541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &819897901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24585,6 +24590,10 @@ PrefabInstance:
       propertyPath: hat3Button
       value: 
       objectReference: {fileID: 652079854}
+    - target: {fileID: 360579861216336078, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 804108545}
     - target: {fileID: 360579861216336078, guid: c84ab000f18049f83a783d8f7800869b, type: 3}
       propertyPath: currencyText
       value: 

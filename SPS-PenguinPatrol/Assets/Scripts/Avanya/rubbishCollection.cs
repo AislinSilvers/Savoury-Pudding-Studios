@@ -15,6 +15,8 @@ public class rubbishCollection : MonoBehaviour, IDataPersistence
     public bool hat2Bought;
     public bool hat3Bought;
 
+    public AudioSource audioSource;
+
     void Start()
     {
         UpdateCurrencyText();
@@ -34,6 +36,7 @@ public class rubbishCollection : MonoBehaviour, IDataPersistence
             Currency++;
             UpdateCurrencyText();
             Destroy(other.gameObject);
+            audioSource.Play();
         }
     }
 
