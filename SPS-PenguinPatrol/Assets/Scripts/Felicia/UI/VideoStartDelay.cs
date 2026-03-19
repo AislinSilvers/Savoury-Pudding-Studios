@@ -14,7 +14,7 @@ public class VideoStartDelay : MonoBehaviour
     public RenderTexture renderTexture; //assign CutsceneRenderTexture, place where video shows up
 
     public string nextSceneName = "Antarctica";
-    public float videoDuration = 10f;   //delay before scene loads
+    public float videoDuration = 30f;   //delay before scene loads
 
     [SerializeField] public GameObject menuPanel;   //assign MainMenuCanvas (to hide)
     [SerializeField] public GameObject cutscenePanel;
@@ -51,7 +51,7 @@ public class VideoStartDelay : MonoBehaviour
             cutscene.Play();    
         }
 
-        yield return new WaitForSecondsRealtime(10f);   //delay
+        yield return new WaitForSecondsRealtime(30f);   //delay
     }
 
     public void LoadNext()

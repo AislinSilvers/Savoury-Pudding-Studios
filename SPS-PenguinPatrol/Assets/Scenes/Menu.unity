@@ -1153,7 +1153,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960101464}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: be023b890325d3d4090ecf6a9fbcd85e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: fe2c8b61710ea8c4c9f86c3f43a03034, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -2663,7 +2663,7 @@ MonoBehaviour:
   videoDisplay: {fileID: 964504417}
   renderTexture: {fileID: 8400000, guid: 12e22b54a9f7c7d4c8c9b4128f3f6a73, type: 2}
   nextSceneName: Antarctica
-  videoDuration: 10
+  videoDuration: 30
   menuPanel: {fileID: 8468840153782185572}
   cutscenePanel: {fileID: 1526983639}
 --- !u!224 &1813506283500610919
@@ -5702,16 +5702,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Savoury Pudding Studios (SPS) first game ever, "Penguin Patrol"!
-
-    This
-    is a demo version of the game, follow for more updates and news.
-
-    [link to
-    social media?]'
+  m_text: "Savoury Pudding Studios (SPS) first game ever, \"Penguin Patrol\"!\nThis
+    is a demo version of the game.\nFor more updates and news follow our \ninstagram
+    @SavouryPuddingStudio\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b1c435ffe41ecb49ad867b204dca346, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2848228938626605193, guid: 5b1c435ffe41ecb49ad867b204dca346, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5735,7 +5731,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.95
+  m_fontSize: 32
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5776,7 +5772,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &5964676664599625298
@@ -7819,7 +7815,7 @@ MonoBehaviour:
   m_text: ABOUT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b1c435ffe41ecb49ad867b204dca346, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2848228938626605193, guid: 5b1c435ffe41ecb49ad867b204dca346, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
