@@ -35,8 +35,8 @@ public class rubbishCollection : MonoBehaviour, IDataPersistence
         {
             Currency++;
             UpdateCurrencyText();
-            Destroy(other.gameObject);
             audioSource.Play();
+            Destroy(other.gameObject);
         }
     }
 
