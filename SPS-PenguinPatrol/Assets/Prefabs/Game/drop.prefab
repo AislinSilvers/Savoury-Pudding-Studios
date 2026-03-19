@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1019099134458231025}
   - component: {fileID: 1696170038175413979}
   - component: {fileID: 1630028817104726336}
+  - component: {fileID: 3588633601816514759}
   m_Layer: 0
   m_Name: drop
   m_TagString: drop
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -6.661338e-16, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24576001, y: 0.24575998, z: 0.24576001}
+  m_LocalScale: {x: 0.1363624, y: 0.18146844, z: 0.13926482}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 8c3c38a1e01e6b041996aaf70ecf2858, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,3 +137,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3588633601816514759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5985872550874606457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97212cbe77463dd40aaa053861a0de5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropScatter: {fileID: 3056482167931878917, guid: b990c151d55752b49b932bb6f61860d3, type: 3}

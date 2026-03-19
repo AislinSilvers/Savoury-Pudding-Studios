@@ -3157,6 +3157,7 @@ GameObject:
   - component: {fileID: 165740639}
   - component: {fileID: 166140638}
   - component: {fileID: 166140639}
+  - component: {fileID: 166140640}
   m_Layer: 0
   m_Name: crystalBlue4
   m_TagString: Untagged
@@ -3253,6 +3254,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: -0.06282835, y: -0.17, z: -0.0000038146973}
+--- !u!114 &166140640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165709565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd5533e44ddb749be634eb92816967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularMat: {fileID: 2100000, guid: 1b7e2adb575208f40b72beb81f08a364, type: 2}
+  newMat: {fileID: 2100000, guid: 8c3c38a1e01e6b041996aaf70ecf2858, type: 2}
 --- !u!1001 &166437835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3543,7 +3558,7 @@ GameObject:
   - component: {fileID: 175379409}
   m_Layer: 0
   m_Name: pCrystal3
-  m_TagString: Untagged
+  m_TagString: crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3610,6 +3625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularMat: {fileID: 2100000, guid: 6a28734fd8cf4154187a16385563965c, type: 2}
   newMat: {fileID: 2100000, guid: 70e3c52c3fd999348a202e356b9fd5ba, type: 2}
+  crystalSound: {fileID: 8300000, guid: 3b38f270d213b065d9c08d0c74d14f55, type: 3}
 --- !u!1001 &176909519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6721,6 +6737,7 @@ GameObject:
   - component: {fileID: 324088805}
   - component: {fileID: 326249348}
   - component: {fileID: 326249349}
+  - component: {fileID: 326249350}
   m_Layer: 0
   m_Name: crystalYellow1
   m_TagString: Untagged
@@ -6912,6 +6929,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: -0.06282835, y: -0.17, z: -0.0000038146973}
+--- !u!114 &326249350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324056387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd5533e44ddb749be634eb92816967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularMat: {fileID: 2100000, guid: 36ca0d02225053f409952b5df0e90dd7, type: 2}
+  newMat: {fileID: 2100000, guid: 8c3c38a1e01e6b041996aaf70ecf2858, type: 2}
 --- !u!1001 &326944018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9155,7 +9186,7 @@ GameObject:
   - component: {fileID: 435089453}
   m_Layer: 0
   m_Name: pCrystal2
-  m_TagString: Untagged
+  m_TagString: crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9273,6 +9304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularMat: {fileID: 2100000, guid: 6a28734fd8cf4154187a16385563965c, type: 2}
   newMat: {fileID: 2100000, guid: 6f86c68a3334c3e45b65e06afa590665, type: 2}
+  crystalSound: {fileID: 8300000, guid: 15e3dbe22f0e0312daebe812eb18564d, type: 3}
 --- !u!64 &441615728
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9309,6 +9341,7 @@ GameObject:
   - component: {fileID: 441615728}
   - component: {fileID: 443653391}
   - component: {fileID: 443653392}
+  - component: {fileID: 443653393}
   m_Layer: 0
   m_Name: crytalGreen5
   m_TagString: Untagged
@@ -9436,6 +9469,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: -0.06282835, y: -0.17, z: -0.0000038146973}
+--- !u!114 &443653393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441648078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd5533e44ddb749be634eb92816967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularMat: {fileID: 2100000, guid: 72d6e13f93b61db4ba3b94ca9884df59, type: 2}
+  newMat: {fileID: 2100000, guid: 8c3c38a1e01e6b041996aaf70ecf2858, type: 2}
 --- !u!1 &451437476
 GameObject:
   m_ObjectHideFlags: 0
@@ -9992,7 +10039,67 @@ MonoBehaviour:
         m_CallState: 2
   onPuzzleFailed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 326249350}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 871725094}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 842168075}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 166140640}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 443653393}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &502663427
 Transform:
   m_ObjectHideFlags: 0
@@ -10006,6 +10113,7 @@ Transform:
   m_LocalScale: {x: 12.75223, y: 6.406229, z: 12.73403}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1872906243}
   - {fileID: 324479331}
   - {fileID: 871725091}
   - {fileID: 840398312}
@@ -13042,7 +13150,7 @@ GameObject:
   - component: {fileID: 628970412}
   m_Layer: 0
   m_Name: pCrystal5
-  m_TagString: Untagged
+  m_TagString: crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13124,6 +13232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularMat: {fileID: 2100000, guid: 6a28734fd8cf4154187a16385563965c, type: 2}
   newMat: {fileID: 2100000, guid: 72d6e13f93b61db4ba3b94ca9884df59, type: 2}
+  crystalSound: {fileID: 8300000, guid: c79a2416907935533bb5a985878049d4, type: 3}
 --- !u!1001 &632377205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17049,6 +17158,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2479210534120256873, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2779736943678249326, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
       propertyPath: hat3DModel
       value: 
@@ -17107,7 +17220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100016663838549467, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -61.999878
+      value: -62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789707029853763763, guid: cc50105866cef4f4892b52efd8b3e9da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.166748
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17274,6 +17391,7 @@ GameObject:
   - component: {fileID: 840003434}
   - component: {fileID: 842168073}
   - component: {fileID: 842168074}
+  - component: {fileID: 842168075}
   m_Layer: 0
   m_Name: crystalRed3
   m_TagString: Untagged
@@ -17423,6 +17541,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: -0.06282835, y: -0.17, z: -0.0000038146973}
+--- !u!114 &842168075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839969224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd5533e44ddb749be634eb92816967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularMat: {fileID: 2100000, guid: 6f86c68a3334c3e45b65e06afa590665, type: 2}
+  newMat: {fileID: 2100000, guid: 8c3c38a1e01e6b041996aaf70ecf2858, type: 2}
 --- !u!1001 &844851315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17785,6 +17917,7 @@ GameObject:
   - component: {fileID: 871588517}
   - component: {fileID: 871725092}
   - component: {fileID: 871725093}
+  - component: {fileID: 871725094}
   m_Layer: 0
   m_Name: crystalPink2
   m_TagString: Untagged
@@ -17881,6 +18014,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: -0.06282835, y: -0.17, z: -0.0000038146973}
+--- !u!114 &871725094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871556099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd5533e44ddb749be634eb92816967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularMat: {fileID: 2100000, guid: 70e3c52c3fd999348a202e356b9fd5ba, type: 2}
+  newMat: {fileID: 2100000, guid: 8c3c38a1e01e6b041996aaf70ecf2858, type: 2}
 --- !u!1001 &874811731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31688,7 +31835,7 @@ GameObject:
   - component: {fileID: 1722041352}
   m_Layer: 0
   m_Name: pCrystal1
-  m_TagString: Untagged
+  m_TagString: crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31707,6 +31854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularMat: {fileID: 2100000, guid: 6a28734fd8cf4154187a16385563965c, type: 2}
   newMat: {fileID: 2100000, guid: 36ca0d02225053f409952b5df0e90dd7, type: 2}
+  crystalSound: {fileID: 8300000, guid: 8b579a81cb72840138a671d213838745, type: 3}
 --- !u!65 &1722041351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33402,7 +33550,7 @@ GameObject:
   - component: {fileID: 1803406054}
   m_Layer: 0
   m_Name: pCrystal4
-  m_TagString: Untagged
+  m_TagString: crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33522,6 +33670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularMat: {fileID: 2100000, guid: 6a28734fd8cf4154187a16385563965c, type: 2}
   newMat: {fileID: 2100000, guid: 1b7e2adb575208f40b72beb81f08a364, type: 2}
+  crystalSound: {fileID: 8300000, guid: 5d26de31a272c75bebe9151eb5b91c91, type: 3}
 --- !u!1 &1814636128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 42a66ac9fbcb1c247b24563b389430dc, type: 3}
@@ -34661,6 +34810,229 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0951c09cfcf25f84abf40412aa84942e, type: 3}
+--- !u!1 &1872906242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872906243}
+  - component: {fileID: 1872906248}
+  - component: {fileID: 1872906247}
+  - component: {fileID: 1872906246}
+  - component: {fileID: 1872906245}
+  - component: {fileID: 1872906244}
+  m_Layer: 0
+  m_Name: reset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1872906243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872906242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.007852517, y: -0.7767222, z: -0.048281595, w: 0.6279409}
+  m_LocalPosition: {x: -7.5805, y: 4.364, z: -13.2987}
+  m_LocalScale: {x: 0.16863602, y: 0.35981983, z: 0.1521219}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502663427}
+  m_LocalEulerAnglesHint: {x: 6.303, y: -140.876, z: -6.313}
+--- !u!135 &1872906244
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872906242}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.39
+  m_Center: {x: -0.06282835, y: -0.05, z: -0.0000038146973}
+--- !u!114 &1872906245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872906242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c323c7f8f14d8ca44aa3a01be2cf7fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicParticles: {fileID: 3056482167931878917, guid: b990c151d55752b49b932bb6f61860d3, type: 3}
+  musicNumber: 3
+  tileHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 502663426}
+        m_TargetAssemblyTypeName: MusicPuzzle, Assembly-CSharp
+        m_MethodName: ResetPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 326249350}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 871725094}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 842168075}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 166140640}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 443653393}
+        m_TargetAssemblyTypeName: resetMaterials, Assembly-CSharp
+        m_MethodName: ResetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
+  tileSound: {fileID: 8300000, guid: 615e61b857049ae3bacd296df5dc4ef5, type: 3}
+  canTrigger: 0
+--- !u!64 &1872906246
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872906242}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8fd30ae95dd6d8a45b8d9e2dd4f01ea4, type: 3}
+--- !u!23 &1872906247
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872906242}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8c3c38a1e01e6b041996aaf70ecf2858, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1872906248
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872906242}
+  m_Mesh: {fileID: 4300000, guid: 8fd30ae95dd6d8a45b8d9e2dd4f01ea4, type: 3}
 --- !u!1 &1878145045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 42a66ac9fbcb1c247b24563b389430dc, type: 3}
