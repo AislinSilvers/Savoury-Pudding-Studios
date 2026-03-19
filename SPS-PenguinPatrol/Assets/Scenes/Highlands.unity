@@ -4987,7 +4987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pattern: 1234
   puzzleLength: 4
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1776124807}
   correctSound: {fileID: 8300000, guid: afb710002de7ff0429834a6b0b4f1573, type: 3}
   incorrectSound: {fileID: 0}
   onPuzzleSolved:
@@ -20177,6 +20177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1151662114}
     m_Modifications:
+    - target: {fileID: 3558848341838824132, guid: ebd13768caef135499550c5d3699471f, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: afb710002de7ff0429834a6b0b4f1573, type: 3}
     - target: {fileID: 8737545808651046778, guid: ebd13768caef135499550c5d3699471f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.682808
@@ -20229,6 +20233,11 @@ PrefabInstance:
 --- !u!4 &1776124806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8737545808651046778, guid: ebd13768caef135499550c5d3699471f, type: 3}
+  m_PrefabInstance: {fileID: 1776124805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1776124807 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3558848341838824132, guid: ebd13768caef135499550c5d3699471f, type: 3}
   m_PrefabInstance: {fileID: 1776124805}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1776958989
