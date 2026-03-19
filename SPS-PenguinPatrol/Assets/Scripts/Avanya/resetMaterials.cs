@@ -1,14 +1,9 @@
 using UnityEngine;
 
-public class puzzlePassword : MonoBehaviour
+public class resetMaterials : MonoBehaviour
 {
-
-    public Material regularMat;
+   public Material regularMat;
     public Material newMat;
-
-    public AudioClip crystalSound;
-
-    public 
        void Start()
     {
         GetComponent<MeshRenderer>().material = regularMat;
@@ -19,13 +14,11 @@ public class puzzlePassword : MonoBehaviour
         GetComponent<MeshRenderer>().material = regularMat;
     }
   
-    void OnTriggerEnter(Collider other)
+    public void ResetMaterial()
     {
        
-        if (other.tag == "drop"){
             GetComponent<MeshRenderer>().material = newMat;
-            soundFXManager.instance.playSoundFXClip(crystalSound, transform, 0.1f);
             Invoke("ResetMats",0.7f);
         }
     }
-}
+
