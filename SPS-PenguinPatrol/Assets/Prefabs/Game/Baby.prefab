@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.37, y: 1.21, z: -0.39}
-  m_LocalScale: {x: 0.43980998, y: 0.43980995, z: 0.5424176}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.37236175, y: 0.37236175, z: 0.45923367}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7122212469248439761}
   - {fileID: 2574174839656793497}
@@ -128,12 +128,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  smoothSpeed: 20
-  rotationSpeed: 12
+  smoothSpeed: 3
+  rotationSpeed: 7
   follow: 0
   followOffset: {x: 0.05, y: -2.84, z: -2.55}
   portalToActivate: {fileID: 0}
-  babyID: babyHighlands
+  babyID: babyCave
 --- !u!65 &4953758747938400082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -155,6 +155,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9820014, y: 2, z: 1.8629116}
   m_Center: {x: -0.15281236, y: 0, z: -0.06963826}
+--- !u!1 &7610236943583506283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f306afba513ce740b7da84f0b5734e8, type: 3}
+  m_PrefabInstance: {fileID: 7304161279434052154}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7122212469248439761}
+  - component: {fileID: 4627749147310864383}
+  m_Layer: 0
+  m_Name: 'BabyPenguin03_ANIM_Hover_v02 (Missing Prefab with guid: 3f306afba513ce740b7da84f0b5734e8)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7122212469248439761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f306afba513ce740b7da84f0b5734e8, type: 3}
+  m_PrefabInstance: {fileID: 7304161279434052154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610236943583506283}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.05, y: -0.89, z: -0.06}
+  m_LocalScale: {x: 8.692389, y: 8.692388, z: 8.69239}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 957261624780530444}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &899948106218621427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 4240243478578051364, guid: 24662f1d8fca9824fb6af77eb2902df7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 31cd1dc3a7a411840a6ad56136092f43, type: 2}
+      objectReference: {fileID: 2100000, guid: 06e87460093a5cf4698ce247594a3d8d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -484,16 +516,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4627749147310864383}
   m_SourcePrefab: {fileID: 100100000, guid: 3f306afba513ce740b7da84f0b5734e8, type: 3}
---- !u!4 &7122212469248439761 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f306afba513ce740b7da84f0b5734e8, type: 3}
-  m_PrefabInstance: {fileID: 7304161279434052154}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7610236943583506283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f306afba513ce740b7da84f0b5734e8, type: 3}
-  m_PrefabInstance: {fileID: 7304161279434052154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &4627749147310864383
 Animator:
   serializedVersion: 7
