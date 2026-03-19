@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -3.5, z: 0}
-  m_LocalScale: {x: 0.5404, y: 0.5404, z: 0.54038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7246757633762349031}
@@ -131,7 +131,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: faaa5e43b9ed043489502633e05c0418, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c340bb2b6ae470c4aab85410fd5f3b9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -173,7 +173,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.39, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7346460726115424310}
@@ -259,7 +259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactAnimator: {fileID: 4203727542091245020}
-  dialogueSO: {fileID: 11400000, guid: bb597ea6ded486b43996a4e0fcbac363, type: 2}
+  dialogueSO: {fileID: 11400000, guid: 8d40408694e321f4eb5105b6b6e904ec, type: 2}
+  canvasGroup: {fileID: 0}
   dialogueActivated: 0
 --- !u!65 &510766826788998041
 BoxCollider:
@@ -280,8 +281,8 @@ BoxCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 54.8125, y: 38.75415, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 48.533707, y: 19.348259, z: 2.2744184}
+  m_Center: {x: -2.1721764, y: 2.0338743, z: -0.09138465}
 --- !u!136 &20059597386393069
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -301,7 +302,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 27.40625
-  m_Height: 38.75415
+  m_Radius: 5.357664
+  m_Height: 115.986404
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 3.9597702, y: 20.76191, z: 0.22441864}
