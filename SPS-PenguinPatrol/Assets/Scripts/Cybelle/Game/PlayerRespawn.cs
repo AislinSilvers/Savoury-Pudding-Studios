@@ -12,17 +12,17 @@ public class PlayerRespawn : MonoBehaviour,  IDataPersistence
     public GameData data;
     //public Transform spawn;
 
-     public string currentScene = "Antarctica";
+     //public string currentScene = "Antarctica";
 
-    public bool articLoad = true;
-    public bool highLoad = true;
-    public bool caveLoad = true;
+    //public bool articLoad = true;
+   // public bool highLoad = true;
+   // public bool caveLoad = true;
 
     //public Spawnplayer playerPosData;
 
-    public void Awake()
-    {
-        transform.position = startPoint;
+    //public void Awake()
+   // {
+        //transform.position = startPoint;
         
 //
 //        if (currentScene == "Caves" && caveLoad)
@@ -41,11 +41,11 @@ public class PlayerRespawn : MonoBehaviour,  IDataPersistence
 //            //articLoad = false;
 //        }
 //       
-    }
+    //}
 
     public void Start()
     {
-       //transform.position = startPoint;
+       transform.position = startPoint;
     }
 
     public void RespawnNow()

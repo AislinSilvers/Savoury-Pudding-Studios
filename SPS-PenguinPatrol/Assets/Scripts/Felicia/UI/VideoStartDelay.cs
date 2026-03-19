@@ -66,7 +66,8 @@ public class VideoStartDelay : MonoBehaviour
         
         Debug.Log("New Game Clicked");
         //creates a new game, which initializes our game data
-        save.instance.NewGame();
+        DataPersistenceManager.instance.NewGame();
+        save.SaveGame();
 
         //end of Cybelle's code
 

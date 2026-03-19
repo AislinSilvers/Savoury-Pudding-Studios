@@ -104,7 +104,7 @@ public class GameMenu : MonoBehaviour
             //data.playerPosition = respawn.respawnPoint;
             //playerPosData.PlayerPosSave(); //this was for the second attemp, it did not work and i dont like how the code is writen
             PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
-            PlayerPrefs.SetInt("SavedLoad", 5);
+            //PlayerPrefs.SetInt("SavedLoad", 5);
             save.SaveGame();
             //not cybelles line of code, below this
             SceneManager.LoadScene(0);
