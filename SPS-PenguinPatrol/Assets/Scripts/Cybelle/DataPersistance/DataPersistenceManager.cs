@@ -7,10 +7,6 @@ public class DataPersistenceManager : MonoBehaviour
 {
    
     //all this code was made form the same video as the GameData script, videos in that scripts notes
-
-
-    [Header("Debugging")]
-    [SerializeField] private bool initializeDataIfNull = false;
     
 
     [Header("File Storage Config")]
@@ -54,12 +50,6 @@ public class DataPersistenceManager : MonoBehaviour
         LoadGame();
     }
 
-    public void OnSceneUnloaded(Scene scene)
-    {
-        Debug.Log("OnSceneUnloaded Called");
-        SaveGame();
-    }
-
     public void NewGame()
     {
         this.gameData = new GameData();
@@ -69,12 +59,6 @@ public class DataPersistenceManager : MonoBehaviour
     {
         //load any saved data from a file using the data handler
         this.gameData = dataHandler.Load();
-
-        if (this.gameData == null && initializeDataIfNull)
-        {
-            //will need to toggle the bool on for testing save stuff in scenes if we dont want to go though the whole main menu
-            NewGame();
-        }
 
         //if no data can be loaded, initialize to a new game (according to video), basically load game dosent work unless there is loaded data, make new save if not data
         if (this.gameData == null)
