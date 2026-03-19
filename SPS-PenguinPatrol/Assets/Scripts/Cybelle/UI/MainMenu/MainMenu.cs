@@ -36,9 +36,10 @@ public class MainMenu : Menu
         DisableMenuButtons();
         Debug.Log("New Game Clicked");
         //creates a new game, which initializes our game data
-        DataPersistenceManager.instance.NewGame();
+       DataPersistenceManager.instance.NewGame();
+       //SaveGameAndLoadScene();
         //loads game and saves game, because of the code in the data persistance manager
-        SceneManager.LoadSceneAsync("Antarctica");
+        //SceneManager.LoadSceneAsync("Antarctica");
 
     }
 
@@ -52,7 +53,7 @@ public class MainMenu : Menu
 //        if(PlayerPrefs.GetInt("SavedLoad") == 5)
 //        {
 //            DisableMenuButtons();
-            SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SavedScene"));
+            SaveGameAndLoadScene();
            
 //        }
 //        else
@@ -60,6 +61,14 @@ public class MainMenu : Menu
 //            return;
 //        }
 //        
+    }
+
+      private void SaveGameAndLoadScene() 
+    {
+        // save the game anytime before loading a new scene
+        DataPersistenceManager.instance.SaveGame();
+        // load the scene
+        SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SavedScene"));
     }
 
     private void DisableMenuButtons()
