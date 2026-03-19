@@ -74,8 +74,16 @@ public class PlayerRespawn : MonoBehaviour,  IDataPersistence
         //data.firstLoadCave = caveLoad;
         
     }
-    
+
 
    //ok so I have given up, sometiems the player location is saved mostof the time it doesnt so i am just letting the save for scene 
    //be the save for the virtical slice demo, if this was going to be a longer game I would find a way.
+   void OnTriggerEnter(Collider collision)
+   {
+    if(collision.gameObject.name == "Outta")
+    {
+        RespawnNow();
+    }
+
+   }
 }
