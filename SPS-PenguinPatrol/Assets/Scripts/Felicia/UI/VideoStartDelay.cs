@@ -19,8 +19,14 @@ public class VideoStartDelay : MonoBehaviour
     [SerializeField] public GameObject menuPanel;   //assign MainMenuCanvas (to hide)
     [SerializeField] public GameObject cutscenePanel;
 
+    public DataPersistenceManager save;
+    public PauseMenu pause;
+    public GameData data;
+
     void Start()
     {
+
+        save = GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>();
         if (cutscene != null)
         {
             cutscenePanel.SetActive(false);
@@ -60,7 +66,7 @@ public class VideoStartDelay : MonoBehaviour
         
         Debug.Log("New Game Clicked");
         //creates a new game, which initializes our game data
-        DataPersistenceManager.instance.NewGame();
+        save.instance.NewGame();
 
         //end of Cybelle's code
 

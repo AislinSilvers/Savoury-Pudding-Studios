@@ -99,9 +99,8 @@ public class DataPersistenceManager : MonoBehaviour
     }
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("LoadSaved", 1);
-        PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
         SaveGame();
+        PlayerPrefs.SetInt("SavedScene",SceneManager.GetActiveScene().buildIndex);
     }
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {
