@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.015467245, y: 0.9275333, z: 0.0010361271, w: 0.3734189}
   m_LocalPosition: {x: 105.78, y: -19.75, z: -65.175}
-  m_LocalScale: {x: 0.31615, y: 0.31615, z: 0.31615}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.45632014}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9013276565967685443}
   - {fileID: 4130115123265677317}
@@ -127,12 +127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  smoothSpeed: 20
-  rotationSpeed: 12
+  smoothSpeed: 3
+  rotationSpeed: 7
   follow: 1
-  followOffset: {x: 0.05, y: -2.84, z: -2.55}
+  followOffset: {x: 0, y: 0, z: -2}
   portalToActivate: {fileID: 0}
-  babyID: babyAntarctica
+  babyID: babyArtic
 --- !u!65 &8634140223333789121
 BoxCollider:
   m_ObjectHideFlags: 0
