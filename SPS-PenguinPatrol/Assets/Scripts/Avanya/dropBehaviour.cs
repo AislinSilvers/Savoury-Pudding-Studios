@@ -12,6 +12,12 @@ public class dropBehaviour : MonoBehaviour
                 Instantiate(dropScatter, transform.position, Quaternion.identity);
             Destroy(gameObject);
             }
+            
+            if (other.transform.tag == "Player")
+             {
+                Instantiate(dropScatter, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            }
 
     }
 }
